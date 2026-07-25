@@ -4,19 +4,10 @@ STL Shelf is a unified full-stack TypeScript app (TanStack Start) for managing a
 
 Package manager: Bun (`bun@1.3.5`). Use `bun` commands, not npm/yarn.
 
-Non-standard commands:
+Command gotchas (everything else is in `package.json` scripts):
 
-- Dev server: `bun dev` (runs on port 3000)
-- Lint: `bun lint` (oxlint --fix)
-- Format: `bun format` (oxfmt --write .)
-- Type check: `bun check-types` (tsgo)
-- Lint/format checks: `bun check` (oxlint + oxfmt, no autofix)
-- Build: `bun build` (do not run if the dev server is already running)
-- Preview build: `bun preview`
-- Production server: `bun start` (runs pending migrations first, then serves)
-- Tests: `bun test` (vitest run)
-- Ngrok tunnel (Polar webhooks): `bun run ngrok`
-- Docs list: `bun docs:list`
+- Build: `bun build` — do not run if the dev server is already running.
+- Tests: `bun run test` — NOT `bun test`, which invokes Bun's own runner and breaks on `vi.hoisted`.
 
 Quality gate:
 
@@ -38,29 +29,11 @@ Database:
 - If a migration is ever applied out-of-band (psql), record it: `INSERT INTO drizzle.__drizzle_migrations (hash, created_at) VALUES (sha256-hex of the .sql file, journal "when" ms)`.
 - Deploys: `bun start` runs migrations BEFORE the server binds — a failed migration aborts startup (loud banner, exit 1) so the old container keeps serving. In Coolify the start command must be `bun start`; never run migrations as a post-deployment hook (hook failures are silent and run after new code is already live — this hid unapplied migrations 0014/0015 in prod from Jan to Jul 2026).
 
-MinIO CORS + bucket policy (first-time setup):
+MinIO bucket policy:
 
-- `docker exec stl-shelf-minio mc alias set local http://localhost:9000 stlshelf stlshelf_minio_dev_password`
-- `docker exec stl-shelf-minio mc admin config set local api cors_allow_origin="http://localhost:3000"`
-- `docker exec stl-shelf-minio mc anonymous set none local/stl-shelf-models`
-- `docker compose restart minio`
 - The bucket must stay private (no anonymous reads) to match the production object storage: all reads go through presigned URLs or `/api/download/*`. Environments bootstrapped before July 2026 had a public-read policy — the `mc anonymous set none` step fixes them.
 
-Local OAuth testing (ngrok):
-
-- `bun run ngrok`
-- `.env`: `NGROK_DOMAIN=yourname.ngrok-free.app`, `NGROK_PORT=3000` (optional), `AUTH_URL=https://yourname.ngrok-free.app`, `WEB_URL=https://yourname.ngrok-free.app`
-- Polar webhook: `https://yourname.ngrok-free.app/api/auth/polar/webhooks`
-
-Data backup:
-
-- Postgres: `docker exec stl-shelf-postgres pg_dump -U stlshelf stlshelf > backup.sql`
-- MinIO: `docker run --rm -v stl-shelf_minio_data:/data -v $(pwd):/backup alpine tar czf /backup/minio-backup.tar.gz /data`
-
-Maintenance scripts:
-
-- `bun retention:sweep`
-- `bun account-deletion:sweep`
+One-time environment setup (MinIO CORS + bucket bootstrap, ngrok OAuth tunnel, Postgres/MinIO backups): see [`.claude/skills/stl-shelf-environment-setup/SKILL.md`](.claude/skills/stl-shelf-environment-setup/SKILL.md).
 
 Git:
 
