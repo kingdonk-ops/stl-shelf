@@ -1,18 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { z } from "zod";
 import { ActiveAddonsCard } from "@/components/billing/active-addons-card";
 import { PlanSelector } from "@/components/billing/plan-selector";
 import { StorageAddonsCard } from "@/components/billing/storage-addons-card";
 import { SubscriptionStatusCard } from "@/components/billing/subscription-status-card";
 import { Button } from "@/components/ui/button";
 import { useSubscription } from "@/hooks/use-subscription";
+import { BILLING_INTERVALS } from "@/lib/billing/config";
 import { useOpenPanelClient } from "@/lib/openpanel/client-provider";
 import { getPublicPricing } from "@/server/functions/pricing";
 
 export const Route = createFileRoute("/billing")({
   head: () => ({
     meta: [{ name: "robots", content: "noindex, nofollow" }],
+  }),
+  // `interval` lets pricing CTAs deep-link straight into the plan they picked.
+  validateSearch: z.object({
+    interval: z.enum(BILLING_INTERVALS).optional(),
   }),
   loader: async () => {
     const pricing = await getPublicPricing();
@@ -23,6 +29,7 @@ export const Route = createFileRoute("/billing")({
 
 function BillingPage() {
   const { pricing } = Route.useLoaderData();
+  const { interval } = Route.useSearch();
   const { client } = useOpenPanelClient();
   const { subscription } = useSubscription();
   const trackedRef = useRef(false);
@@ -81,7 +88,11 @@ function BillingPage() {
                 </p>
               </div>
             </div>
-            <PlanSelector className="max-w-none mx-0 gap-5 sm:grid-cols-3" pricing={pricing} />
+            <PlanSelector
+              className="max-w-none mx-0 gap-5 sm:grid-cols-3"
+              initialInterval={interval}
+              pricing={pricing}
+            />
           </section>
         </div>
       </div>

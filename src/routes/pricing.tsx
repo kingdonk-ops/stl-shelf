@@ -101,7 +101,7 @@ function PricingPage() {
             storage.
           </p>
         </header>
-        <PricingSection pricing={pricing} />
+        <PricingSection isAuthenticated={Boolean(session?.user)} pricing={pricing} />
         <Footer />
       </main>
     </>

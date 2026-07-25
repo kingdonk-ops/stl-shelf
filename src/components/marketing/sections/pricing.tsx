@@ -3,9 +3,10 @@ import type { PublicPricingResponse } from "@/server/functions/pricing";
 
 type PricingProps = {
   pricing?: PublicPricingResponse | null;
+  isAuthenticated?: boolean;
 };
 
-export function Pricing({ pricing }: PricingProps) {
+export function Pricing({ pricing, isAuthenticated = false }: PricingProps) {
   return (
     <section id="pricing" className="relative py-24 overflow-hidden">
       <div
@@ -34,7 +35,7 @@ export function Pricing({ pricing }: PricingProps) {
           </p>
         </div>
 
-        <PricingCards pricing={pricing} />
+        <PricingCards isAuthenticated={isAuthenticated} pricing={pricing} />
 
         <p className="mt-4 text-center text-xs text-muted-foreground/80">
           Limits shown in these plans apply to STL Shelf Cloud (stl-shelf.com) only.

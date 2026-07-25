@@ -20,6 +20,8 @@ import { cn } from "@/lib/utils";
 type PlanSelectorProps = {
   pricing?: PublicPricingResponse | null;
   className?: string;
+  /** Preselected billing interval, e.g. when arriving from a pricing CTA. */
+  initialInterval?: BillingInterval;
 };
 
 const tierRank: Record<SubscriptionTier, number> = {
@@ -48,13 +50,15 @@ const getActionLabel = ({
   return `Upgrade to ${tierName}`;
 };
 
-export const PlanSelector = ({ pricing, className }: PlanSelectorProps) => {
+export const PlanSelector = ({ pricing, className, initialInterval }: PlanSelectorProps) => {
   const { startCheckout, loadingProductSlug, isLoading: isCheckoutLoading } = useCheckout();
   const { openPortal, isLoading: isPortalLoading } = useCustomerPortal();
   const { subscription } = useSubscription();
   const { client } = useOpenPanelClient();
   const currentTier = subscription?.tier ?? "free";
-  const [billingInterval, setBillingInterval] = useState<BillingInterval>("month");
+  const [billingInterval, setBillingInterval] = useState<BillingInterval>(
+    initialInterval ?? "month",
+  );
   const visibleSlugs: TierSlug[] = ["free", "basic", "pro"];
 
   const handleSelectPlan = (tier: SubscriptionTier) => {

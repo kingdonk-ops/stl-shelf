@@ -1,18 +1,27 @@
 import { Check } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import type { BillingInterval } from "@/lib/billing/config";
 import { trackCtaClick } from "@/lib/openpanel/client-events";
 import { useOpenPanelClient } from "@/lib/openpanel/client-provider";
 import { cn } from "@/lib/utils";
-import type { PricingTier } from "./pricing-utils";
+import { resolvePricingCtaTarget, type PricingTier } from "./pricing-utils";
 
 type PricingCardProps = {
   tier: PricingTier;
   renderCta?: (tier: PricingTier) => React.ReactNode;
+  isAuthenticated?: boolean;
+  interval?: BillingInterval;
 };
 
-export function PricingCard({ tier, renderCta }: PricingCardProps) {
+export function PricingCard({
+  tier,
+  renderCta,
+  isAuthenticated = false,
+  interval = "month",
+}: PricingCardProps) {
   const { client } = useOpenPanelClient();
+  const ctaTarget = resolvePricingCtaTarget({ isAuthenticated, slug: tier.slug, interval });
 
   return (
     <div
@@ -75,12 +84,17 @@ export function PricingCard({ tier, renderCta }: PricingCardProps) {
           >
             <Link
               onClick={() =>
-                trackCtaClick(client, `pricing_${tier.slug}_signup`, {
-                  location: "pricing_card",
-                  variant: tier.highlighted ? "highlighted" : "standard",
-                })
+                trackCtaClick(
+                  client,
+                  `pricing_${tier.slug}_${isAuthenticated ? "upgrade" : "signup"}`,
+                  {
+                    location: "pricing_card",
+                    variant: tier.highlighted ? "highlighted" : "standard",
+                    interval,
+                  },
+                )
               }
-              to="/signup"
+              {...ctaTarget}
             >
               {tier.cta}
             </Link>

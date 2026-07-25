@@ -1,5 +1,6 @@
 import { AlertCircle, Check, Trash2 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,6 +14,7 @@ import {
   type SubscriptionTier,
 } from "@/lib/billing/config";
 import { formatStorage } from "@/lib/billing/utils";
+import { PricingIntervalToggle } from "@/components/pricing/pricing-interval-toggle";
 
 type UploadBlockedStateProps = {
   limits: UploadLimitsResult;
@@ -30,18 +32,31 @@ const getRecommendedTier = (currentTier: SubscriptionTier): SubscriptionTier => 
   return currentTier;
 };
 
-const formatMonthlyPrice = (amountInCents: number, currency: string) =>
+const formatTierPrice = (amountInCents: number, currency: string) =>
   new Intl.NumberFormat("en-US", {
     style: "currency",
     currency,
     maximumFractionDigits: amountInCents % 100 === 0 ? 0 : 2,
   }).format(amountInCents / 100);
 
+/**
+ * What a plan card in this modal offers for the selected interval.
+ * Extracted so the interval can never silently go back to being fixed:
+ * the product slug sent to checkout must follow the toggle.
+ */
+export const getBlockedPlanOffer = (tier: SubscriptionTier, interval: BillingInterval) => ({
+  productSlug: getProductSlugForTier(tier, interval),
+  periodSuffix: interval === "year" ? "/yr" : "/mo",
+});
+
 export function UploadBlockedState({ limits, onClose }: UploadBlockedStateProps) {
   const { startCheckout, loadingProductSlug, isLoading } = useCheckout();
   const { pricing } = usePublicPricing();
   const recommendedTier = getRecommendedTier(limits.tier);
-  const billingInterval: BillingInterval = "month";
+  // Annual has to be reachable from here too: this modal is where users hit the
+  // wall, and offering monthly only both hid the cheaper plan and made
+  // annual-scoped discount codes unusable.
+  const [billingInterval, setBillingInterval] = useState<BillingInterval>("month");
 
   const handleDismiss = () => {
     console.log("limit_block_dismissed", {
@@ -90,8 +105,7 @@ export function UploadBlockedState({ limits, onClose }: UploadBlockedStateProps)
 
   const handleUpgradeClick = (tier: SubscriptionTier) => {
     console.log("limit_upgrade_clicked", { from: limits.tier, to: tier });
-    const productSlug = getProductSlugForTier(tier, billingInterval);
-    startCheckout(productSlug);
+    startCheckout(getBlockedPlanOffer(tier, billingInterval).productSlug);
   };
 
   return (
@@ -107,13 +121,15 @@ export function UploadBlockedState({ limits, onClose }: UploadBlockedStateProps)
         </div>
       </div>
 
+      <PricingIntervalToggle onChange={setBillingInterval} value={billingInterval} />
+
       {/* Plan comparison grid */}
       <div className="grid gap-4 md:grid-cols-3">
         {TIER_ORDER.map((tierKey) => {
           const config = SUBSCRIPTION_TIERS[tierKey];
           const isCurrent = limits.tier === tierKey;
           const isRecommended = tierKey === recommendedTier && !isCurrent;
-          const productSlug = getProductSlugForTier(tierKey, billingInterval);
+          const { productSlug, periodSuffix } = getBlockedPlanOffer(tierKey, billingInterval);
           let actionLabel = `Upgrade to ${config.name}`;
           if (loadingProductSlug === productSlug) {
             actionLabel = "Loading...";
@@ -148,8 +164,10 @@ export function UploadBlockedState({ limits, onClose }: UploadBlockedStateProps)
                 <CardTitle className="text-lg">{config.name}</CardTitle>
                 {priceData && (
                   <p className="font-bold text-2xl">
-                    {formatMonthlyPrice(priceData.amount, priceData.currency || "USD")}
-                    <span className="font-normal text-muted-foreground text-sm">/mo</span>
+                    {formatTierPrice(priceData.amount, priceData.currency || "USD")}
+                    <span className="font-normal text-muted-foreground text-sm">
+                      {periodSuffix}
+                    </span>
                   </p>
                 )}
               </CardHeader>

@@ -60,6 +60,38 @@ const tierUiConfig: Record<TierSlug, TierUiConfig> = {
 
 export const defaultVisibleSlugs: TierSlug[] = ["free", "basic", "pro"];
 
+export type PricingCtaTarget =
+  | { to: "/signup" }
+  | { to: "/library" }
+  | { to: "/billing"; search: { interval: BillingInterval } };
+
+/**
+ * Where a public pricing card's CTA should send the visitor.
+ *
+ * Signed-in visitors must NOT be sent to /signup: the root guard bounces
+ * authenticated users off auth routes straight to /library, which silently
+ * swallowed both the upgrade intent and the selected billing interval. They go
+ * to /billing instead, carrying the interval so the plan selector opens on it.
+ */
+export const resolvePricingCtaTarget = ({
+  isAuthenticated,
+  slug,
+  interval,
+}: {
+  isAuthenticated: boolean;
+  slug: TierSlug;
+  interval: BillingInterval;
+}): PricingCtaTarget => {
+  if (!isAuthenticated) {
+    return { to: "/signup" };
+  }
+  // Nothing to buy on Free: send them back to the app.
+  if (slug === "free") {
+    return { to: "/library" };
+  }
+  return { to: "/billing", search: { interval } };
+};
+
 const formatPeriod = (interval: BillingInterval | null, intervalCount: number | null) => {
   if (!interval) return "forever";
   if (intervalCount && intervalCount > 1) {

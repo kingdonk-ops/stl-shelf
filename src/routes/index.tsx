@@ -139,7 +139,7 @@ function LandingPage() {
         <Resources />
         <Testimonials />
         <FAQ />
-        <Pricing pricing={pricing} />
+        <Pricing isAuthenticated={Boolean(session?.user)} pricing={pricing} />
         <FinalCTA />
         <Footer />
       </main>

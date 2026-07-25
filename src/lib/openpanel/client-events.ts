@@ -104,7 +104,7 @@ export function trackNavClick(
 export function trackCtaClick(
   client: OpenPanelClient | null,
   button: string,
-  context?: { location?: string; variant?: string },
+  context?: { location?: string; variant?: string; interval?: string },
 ) {
   client?.track(ClientEvent.CTA_CLICK, cleanProperties({ button, ...context }));
 }

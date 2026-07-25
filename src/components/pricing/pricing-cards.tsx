@@ -20,6 +20,8 @@ type PricingCardsProps = {
   onIntervalChange?: (interval: BillingInterval) => void;
   renderCta?: (tier: PricingTier) => React.ReactNode;
   className?: string;
+  /** Drives the default CTA destination; ignored when `renderCta` is provided. */
+  isAuthenticated?: boolean;
 };
 
 export function PricingCards({
@@ -29,6 +31,7 @@ export function PricingCards({
   onIntervalChange,
   renderCta,
   className,
+  isAuthenticated = false,
 }: PricingCardsProps) {
   const router = useRouter();
   const [internalInterval, setInternalInterval] = useState<BillingInterval>(BILLING_INTERVALS[0]);
@@ -50,7 +53,13 @@ export function PricingCards({
         )}
       >
         {tiers.map((tier) => (
-          <PricingCard key={tier.slug} tier={tier} renderCta={renderCta} />
+          <PricingCard
+            interval={resolvedInterval}
+            isAuthenticated={isAuthenticated}
+            key={tier.slug}
+            renderCta={renderCta}
+            tier={tier}
+          />
         ))}
         {paidUnavailable && (
           <PricingUnavailable
