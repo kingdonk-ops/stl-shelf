@@ -5,6 +5,9 @@ import { Footer } from "@/components/marketing/sections";
 import { Button } from "@/components/ui/button";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import type { AuthClient } from "@/lib/auth-client";
+import { trackCtaClick } from "@/lib/openpanel/client-events";
+import { useOpenPanelClient } from "@/lib/openpanel/client-provider";
+import { useMarketingEngagement } from "@/lib/openpanel/use-marketing-engagement";
 import { createJsonLdHeadScript } from "@/lib/seo/json-ld";
 import { OG_IMAGE_URL, siteUrl } from "@/lib/site";
 
@@ -92,6 +95,16 @@ export function createSeoPageHead(page: SeoPageData) {
 }
 
 export function SeoPage({ page, session }: { page: SeoPageData; session?: Session | null }) {
+  const { client } = useOpenPanelClient();
+  useMarketingEngagement({ path: page.path, contentType: "seo_page" });
+
+  const displayLabel = {
+    pillar: "Organization guide",
+    guide: "Practical guide",
+    comparison: "Comparison",
+    "open-source": "Hosting and ownership",
+  }[page.group];
+
   return (
     <div className="flex min-h-screen flex-col">
       <Navigation session={session} />
@@ -111,7 +124,7 @@ export function SeoPage({ page, session }: { page: SeoPageData; session?: Sessio
           <div className="container relative mx-auto px-4">
             <div className="max-w-5xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-sm font-medium text-orange-500">
-                {page.eyebrow}
+                {displayLabel}
               </div>
               <h1 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl">{page.h1}</h1>
               <div className="mt-6 space-y-4 text-lg text-muted-foreground">
@@ -127,7 +140,7 @@ export function SeoPage({ page, session }: { page: SeoPageData; session?: Sessio
           <div className="container mx-auto px-4">
             <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
               <div className="rounded-2xl border border-border/60 bg-card/80 p-6">
-                <h2 className="text-2xl font-bold">Category definition</h2>
+                <h2 className="text-2xl font-bold">What STL Shelf does</h2>
                 <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
                   {page.semanticStatements.map((statement) => (
                     <li key={statement} className="flex items-start gap-3">
@@ -139,7 +152,7 @@ export function SeoPage({ page, session }: { page: SeoPageData; session?: Sessio
               </div>
 
               <div className="rounded-2xl border border-border/60 bg-card/80 p-6">
-                <h2 className="text-2xl font-bold">STL Shelf helps you</h2>
+                <h2 className="text-2xl font-bold">What you can do</h2>
                 <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
                   {page.featureList.map((item) => (
                     <li key={item} className="flex items-start gap-3">
@@ -268,7 +281,15 @@ export function SeoPage({ page, session }: { page: SeoPageData; session?: Sessio
               <h2 className="text-3xl font-bold md:text-4xl">{page.ctaTitle}</h2>
               <p className="mt-4 text-muted-foreground">{page.ctaDescription}</p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Link to="/signup">
+                <Link
+                  onClick={() =>
+                    trackCtaClick(client, "start_free", {
+                      location: page.path,
+                      variant: "seo_page",
+                    })
+                  }
+                  to="/signup"
+                >
                   <ShimmerButton className="shadow-2xl">
                     <span className="flex items-center gap-2 whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white lg:text-lg">
                       Start Free <ArrowRight className="h-4 w-4" />
@@ -276,7 +297,17 @@ export function SeoPage({ page, session }: { page: SeoPageData; session?: Sessio
                   </ShimmerButton>
                 </Link>
                 <Button asChild size="lg" variant="outline">
-                  <Link to="/pricing">View Pricing</Link>
+                  <Link
+                    onClick={() =>
+                      trackCtaClick(client, "view_pricing", {
+                        location: page.path,
+                        variant: "seo_page",
+                      })
+                    }
+                    to="/pricing"
+                  >
+                    View Pricing
+                  </Link>
                 </Button>
               </div>
             </div>

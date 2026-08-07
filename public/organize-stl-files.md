@@ -3,18 +3,18 @@
 Canonical: https://stl-shelf.com/organize-stl-files
 
 Learn how to organize STL files with tags, version history, browser preview, and a private 3D model library workflow built for makers.
-STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. This page focuses on the operational question most makers actually ask: how do I organize STL files in a way that still works after the library becomes large, messy, and full of revisions.
+STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. It answers the operational question most makers eventually face: how do I organize STL files in a way that still works after the library becomes large, messy, and full of revisions?
 A folder tree can hold files, but it usually cannot answer the day-to-day questions that matter during a print workflow. Which part is the current version? Which files belong to the same project? Which iteration was actually printable? Which model already has a sliced 3MF variant or a production-ready export?
 The goal is not to invent an enterprise DAM workflow for hobby printing. The goal is to create a private, searchable system that lets you find the right model quickly, understand its context, and keep ownership of the archive.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -54,21 +54,21 @@ That is the category STL Shelf is built for. It is STL file management software 
 ## How STL Shelf fits the job
 
 STL Shelf is a private 3D model library software for makers, hobbyists, design iterators, digital hoarders, and small print farms. It helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
-The hosted version managed by us is the default commercial path because it removes infrastructure work. The open-source codebase also allows self-hosting when ownership or deployment control matters more than convenience.
+The hosted version managed by us is the recommended choice for most users because it removes infrastructure work. The open-source codebase also allows self-hosting when ownership or deployment control matters more than convenience.
 
 - Private library instead of public marketplace behavior.
 - Open-source and self-hostable, with hosted deployment available.
 - Browser preview to inspect models without jumping through extra tools.
 - Versioned archive so repeated jobs and design iterations stay traceable.
 
-## Internal linking priorities for this page
+## Explore the workflow in more detail
 
-This page should function as a core pillar. It should send users deeper into tagging, version history, private library positioning, and comparisons with folders or general-purpose storage. That helps search engines understand the cluster and helps human readers move to the next question naturally.
+Once the archive is centralized, the next improvements usually come from a clearer tag system, connected version history, and a deliberate choice between dedicated library software and generic storage.
 
-- Link to tagging guidance for taxonomy design.
-- Link to version-control pages for iteration workflows.
-- Link to comparison pages for users evaluating folders, Google Drive, or Dropbox.
-- Link to self-hosted and open-source pages only after the product category is clear.
+- Use tagging guidance to design a small, consistent taxonomy.
+- Review version-control workflows for models that change over time.
+- Compare STL Shelf with folders, Google Drive, or Dropbox.
+- Consider self-hosting only when deployment control is a firm requirement.
 
 ## FAQ
 

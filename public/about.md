@@ -10,7 +10,7 @@ Built by makers who needed more than folders and generic cloud storage.
 STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 It is built for makers, hobbyists, design iterators, digital hoarders, and small print farms.
 
-## Positioning
+## Built for private libraries
 
 - Private 3D model library software.
 - Open source and self-hostable.

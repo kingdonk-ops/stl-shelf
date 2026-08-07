@@ -6,14 +6,14 @@ A fair comparison of STL Shelf vs Google Drive for private STL file organization
 Google Drive is good at syncing and sharing general files. It is not purpose-built for managing a private 3D printing model archive. That difference matters once you need tags, model-level organization, preview, and reliable version retrieval.
 This comparison keeps the framing fair: Google Drive is useful, but it solves a different primary problem.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

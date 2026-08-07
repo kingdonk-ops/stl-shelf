@@ -6,14 +6,14 @@ Organize OBJ files for 3D printing in a private library with tags, version histo
 OBJ files are often part of broader design and preparation workflows, which makes them easy to strand in project folders or export directories. If they are relevant to printing, they need to live in the same library logic as the rest of the model archive.
 STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. That broader product definition matters because STL Shelf is designed for mixed-format private libraries, not just STL-only collections.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -52,7 +52,7 @@ STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version his
 
 ### Can STL Shelf organize OBJ and STL files together?
 
-Yes. Mixed-format libraries are part of the product positioning.
+Yes. Mixed-format libraries are part of the core product.
 
 ### Why should OBJ files live in the same library as STL files?
 

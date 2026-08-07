@@ -4,16 +4,16 @@ Canonical: https://stl-shelf.com/tagging-stl-files-for-fast-search
 
 Learn how to tag STL files for fast search using a practical taxonomy that improves retrieval without overwhelming the archive.
 Tagging works when it reduces retrieval time and fails when it becomes a second job. The goal is not to create perfect metadata. The goal is to find the right model faster.
-This page focuses on search-first tagging for STL libraries that are too large or too active for folder-only retrieval.
+Search-first tagging keeps large or frequently changing STL libraries retrievable after folders stop scaling.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

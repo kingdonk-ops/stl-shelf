@@ -75,7 +75,7 @@ export function SemanticOverview() {
               <div className="inline-flex rounded-xl bg-orange-500/10 p-3 text-orange-500">
                 <Shield className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold">Positioning</h3>
+              <h3 className="mt-4 text-xl font-semibold">Built for private libraries</h3>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                 <li>Private library, not a marketplace.</li>
                 <li>Open source and self-hostable.</li>

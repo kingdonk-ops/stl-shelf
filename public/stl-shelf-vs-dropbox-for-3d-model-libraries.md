@@ -4,16 +4,16 @@ Canonical: https://stl-shelf.com/stl-shelf-vs-dropbox-for-3d-model-libraries
 
 Compare STL Shelf vs Dropbox for private 3D model libraries, including where Dropbox works well and where dedicated library software adds value.
 Dropbox is good at file storage, sync, and general collaboration. That is useful, but it is not the same as managing a versioned 3D model archive with tags and preview. The distinction matters once the library becomes operationally important.
-This page compares the two fairly so the real alternative is clear: generic storage versus dedicated library structure.
+The real choice is between generic storage and dedicated library structure.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

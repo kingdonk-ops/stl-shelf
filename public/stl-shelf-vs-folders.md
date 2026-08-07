@@ -4,16 +4,16 @@ Canonical: https://stl-shelf.com/stl-shelf-vs-folders
 
 A fair comparison of STL Shelf vs folders for organizing private 3D printing libraries, including where folders still work and where they break down.
 Folders are not bad. They are just limited. For small libraries and stable workflows, they can be enough. The question is not whether folders work at all. The question is where they stop working well enough.
-This page compares folders with a private library workflow so users can make a fair choice instead of hearing a one-sided sales pitch.
+Folders and a private library solve different levels of organization, so the right choice depends on archive size, revisions, and retrieval needs.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

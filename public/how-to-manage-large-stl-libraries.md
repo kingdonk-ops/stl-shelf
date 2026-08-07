@@ -4,16 +4,16 @@ Canonical: https://stl-shelf.com/how-to-manage-large-stl-libraries
 
 Learn how to manage large STL libraries with tags, version history, file grouping, and private library structure that scales past folders.
 Large STL libraries do not fail because they are large. They fail because the structure was designed for a small archive and never upgraded. Once the collection reaches thousands of files, retrieval becomes the real cost center.
-This page focuses on scaling the management model rather than optimizing individual cleanup tasks.
+A scalable management model matters more than a series of isolated cleanup tasks.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

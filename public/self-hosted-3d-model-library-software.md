@@ -3,17 +3,17 @@
 Canonical: https://stl-shelf.com/self-hosted-3d-model-library-software
 
 Self-hosted 3D model library software for private archives, with a hosted version managed by us when you want the simpler path to the same workflow.
-This page targets users who explicitly search for self-hosted 3D model library software. The correct positioning is that STL Shelf can satisfy that need because it is open source, while the hosted version managed by us remains the easier path for most users.
-The page should inform deployment choice, not turn into an operations manual.
+STL Shelf can run as self-hosted 3D model library software because it is open source, while the hosted version managed by us remains the easier path for most users.
+Self-hosting is a deployment choice for ownership requirements, not the main product experience.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -24,22 +24,22 @@ The page should inform deployment choice, not turn into an operations manual.
 - self-host your archive if desired
 - use a hosted version managed by us
 
-## How to position self-hosted library software
+## How to choose a deployment model
 
-1. **Define the archive problem first**: A self-hosted deployment only matters if the underlying software category is the right fit.
-2. **Explain ownership and control**: Users on this page usually want confidence that the deployment model aligns with private archive requirements.
-3. **Keep hosted deployment visible**: The hosted version managed by us should remain a clear alternative for lower-friction adoption.
+1. **Define the archive problem first**: A self-hosted deployment only matters if the private-library workflow is the right fit.
+2. **Explain ownership and control**: Choose self-hosting only when the deployment model must align with a specific private-archive requirement.
+3. **Keep hosted deployment visible**: The hosted version managed by us is the lower-friction choice for most users.
 
-## What users on this page usually mean
+## When self-hosting is relevant
 
-They usually mean they want private 3D model library software and they want the option to run it themselves. That is narrower than a generic self-hosting interest and should be answered accordingly.
+Self-hosting is relevant when private 3D model library software must run on infrastructure you control. If that requirement is absent, the hosted version removes unnecessary operational work.
 
-## What this page should include
+## What to decide before self-hosting
 
-- High-level requirements and expectations.
-- Ownership and control framing.
-- Hosted alternative managed by us.
-- No deep infrastructure tutorial content.
+- Whether deployment control is a firm requirement.
+- Who will own ongoing infrastructure responsibility.
+- Whether the hosted alternative already meets the privacy need.
+- How the same library workflow will serve the team.
 
 ## Where STL Shelf fits
 
@@ -55,9 +55,9 @@ Yes. It can be self-hosted because it is open source.
 
 Not for most users. The hosted version managed by us is usually the simpler option.
 
-### Does this page include a full setup tutorial?
+### Where can I find self-hosting setup details?
 
-No. This page should stay focused on ownership, privacy, and deployment choice at a high level.
+Setup details live in the repository documentation. This guide focuses on ownership, privacy, and deployment choice.
 
 ### Is STL Shelf a marketplace or social platform?
 

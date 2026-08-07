@@ -4,16 +4,16 @@ Canonical: https://stl-shelf.com/stl-shelf-vs-marketplaces-for-private-libraries
 
 Understand why STL Shelf is a private 3D model library rather than a marketplace, and when private archive software is the better fit.
 Marketplaces solve discovery, selling, and distribution. Private library software solves ownership, retrieval, versions, and internal archive structure. Those are adjacent categories, not the same category.
-This page exists because many users evaluate private archive tools against public marketplaces even though the core job is different.
+People often compare private archive tools with public marketplaces even though the core job is different.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

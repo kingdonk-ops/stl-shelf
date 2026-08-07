@@ -6,14 +6,14 @@ Self-host an open-source STL file library for private archives, or use the hoste
 Some users want a private STL library and also want to run the stack themselves. That is a valid need, but it should be framed as a deployment choice inside the product category rather than as the full identity of the product.
 STL Shelf can be self-hosted because it is open source, while the hosted version managed by us remains the easier default path.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -27,16 +27,16 @@ STL Shelf can be self-hosted because it is open source, while the hosted version
 ## How to choose the right path
 
 1. **Confirm the workflow need**: Make sure the real need is private library management, not just generic storage on your own hardware.
-2. **Use hosted when simplicity matters**: The hosted version removes operational overhead and is usually the better commercial fit.
+2. **Use hosted when simplicity matters**: The hosted version removes operational overhead and is the recommended choice for most users.
 3. **Use self-hosted when control matters**: Self-hosting makes sense when deployment control, internal policy, or infrastructure ownership is the priority.
 
-## What this page should not become
+## What self-hosting does not change
 
-- Not a Docker tutorial.
-- Not a long checklist of infrastructure steps.
-- Not a page that makes self-hosting feel like the default for everyone.
+- STL Shelf remains a private model library, not an infrastructure project.
+- The same tags, versions, preview, and retrieval workflow still apply.
+- The hosted service remains the recommended choice unless control is required.
 
-## What it should emphasize instead
+## Choose based on operational responsibility
 
 - Open-source credibility.
 - Ownership and deployment choice.

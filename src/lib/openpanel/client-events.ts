@@ -13,6 +13,7 @@ export const ClientEvent = {
   // Navigation
   NAV_CLICK: "nav_click",
   CTA_CLICK: "cta_click",
+  MARKETING_CONTENT_ENGAGED: "marketing_content_engaged",
 
   // Forms
   FORM_START: "form_start",
@@ -107,6 +108,19 @@ export function trackCtaClick(
   context?: { location?: string; variant?: string; interval?: string },
 ) {
   client?.track(ClientEvent.CTA_CLICK, cleanProperties({ button, ...context }));
+}
+
+export function trackMarketingContentEngaged(
+  client: OpenPanelClient | null,
+  context: {
+    path: string;
+    contentType: "seo_page" | "legacy_guide" | "guide_directory";
+  },
+) {
+  client?.track(ClientEvent.MARKETING_CONTENT_ENGAGED, {
+    ...context,
+    threshold: "50_percent_30_seconds",
+  });
 }
 
 // ============================================================

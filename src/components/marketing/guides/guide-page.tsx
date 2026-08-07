@@ -5,6 +5,9 @@ import { Footer } from "@/components/marketing/sections";
 import { Button } from "@/components/ui/button";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import type { AuthClient } from "@/lib/auth-client";
+import { trackCtaClick } from "@/lib/openpanel/client-events";
+import { useOpenPanelClient } from "@/lib/openpanel/client-provider";
+import { useMarketingEngagement } from "@/lib/openpanel/use-marketing-engagement";
 import { createJsonLdHeadScript } from "@/lib/seo/json-ld";
 import { OG_IMAGE_URL, siteUrl } from "@/lib/site";
 import type { GuideFaq, GuidePageData } from "./guides-data";
@@ -107,6 +110,9 @@ type GuidePageProps = {
 };
 
 export function GuidePage({ guide, session }: GuidePageProps) {
+  const { client } = useOpenPanelClient();
+  useMarketingEngagement({ path: guide.path, contentType: "legacy_guide" });
+
   return (
     <div className="flex min-h-screen flex-col">
       <Navigation session={session} />
@@ -235,7 +241,15 @@ export function GuidePage({ guide, session }: GuidePageProps) {
               <h2 className="text-3xl md:text-4xl font-bold">{guide.ctaTitle}</h2>
               <p className="mt-4 text-muted-foreground">{guide.ctaDescription}</p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link to="/signup">
+                <Link
+                  onClick={() =>
+                    trackCtaClick(client, "start_free", {
+                      location: guide.path,
+                      variant: "legacy_guide",
+                    })
+                  }
+                  to="/signup"
+                >
                   <ShimmerButton className="shadow-2xl">
                     <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white lg:text-lg flex items-center gap-2">
                       Start Free <ArrowRight className="w-4 h-4" />
@@ -243,7 +257,17 @@ export function GuidePage({ guide, session }: GuidePageProps) {
                   </ShimmerButton>
                 </Link>
                 <Button variant="outline" size="lg" asChild>
-                  <Link to="/pricing">View Pricing</Link>
+                  <Link
+                    onClick={() =>
+                      trackCtaClick(client, "view_pricing", {
+                        location: guide.path,
+                        variant: "legacy_guide",
+                      })
+                    }
+                    to="/pricing"
+                  >
+                    View Pricing
+                  </Link>
                 </Button>
               </div>
             </div>

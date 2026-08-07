@@ -4,12 +4,15 @@ import { Navigation } from "@/components/marketing/navigation";
 import { Footer } from "@/components/marketing/sections";
 import { Button } from "@/components/ui/button";
 import { createMarketingHead } from "@/components/marketing/guides/guide-page";
-import { seoPageGroups } from "@/components/marketing/seo/seo-pages-data";
+import { guideCollections } from "@/components/marketing/guides/guide-directory";
+import { trackCtaClick } from "@/lib/openpanel/client-events";
+import { useOpenPanelClient } from "@/lib/openpanel/client-provider";
+import { useMarketingEngagement } from "@/lib/openpanel/use-marketing-engagement";
 import { getSessionFn } from "@/server/functions/auth";
 
-const pageTitle = "STL Shelf Guides, Comparisons, and Category Pages";
+const pageTitle = "Guides for Organizing a Private 3D Model Library | STL Shelf";
 const pageDescription =
-  "Browse pillar pages, supporting guides, comparisons, and open-source content for private 3D model library workflows.";
+  "Find practical guidance for organizing, tagging, versioning, previewing, and protecting a private 3D model library.";
 
 export const Route = createFileRoute("/guides")({
   component: GuidesPage,
@@ -27,6 +30,8 @@ export const Route = createFileRoute("/guides")({
 
 function GuidesPage() {
   const { session } = Route.useLoaderData();
+  const { client } = useOpenPanelClient();
+  useMarketingEngagement({ path: "/guides", contentType: "guide_directory" });
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -47,11 +52,11 @@ function GuidesPage() {
           <div className="container relative mx-auto px-4">
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                Guides, comparisons, and category pages for STL Shelf
+                Organize your 3D model library with confidence
               </h1>
               <p className="mt-6 text-lg text-muted-foreground">
-                Browse the full content cluster around private 3D model library software, STL file
-                management, comparisons, and self-hosted options.
+                Start with the task you need to solve: clean up files, preserve repeatable work,
+                choose a private library, or understand your hosting options.
               </p>
             </div>
           </div>
@@ -60,9 +65,10 @@ function GuidesPage() {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto space-y-12">
-              {seoPageGroups.map((group) => (
+              {guideCollections.map((group) => (
                 <section key={group.key}>
                   <h2 className="text-2xl font-bold">{group.title}</h2>
+                  <p className="mt-3 max-w-3xl text-muted-foreground">{group.description}</p>
                   <ul className="mt-6 space-y-4">
                     {group.pages.map((page) => (
                       <li key={page.path}>
@@ -72,7 +78,7 @@ function GuidesPage() {
                         >
                           <div>
                             <div className="text-xs font-mono uppercase tracking-wide text-orange-500">
-                              {page.groupLabel}
+                              {page.label}
                             </div>
                             <h3 className="mt-2 text-xl font-semibold">{page.listTitle}</h3>
                             <p className="mt-2 text-sm text-muted-foreground">{page.description}</p>
@@ -97,7 +103,17 @@ function GuidesPage() {
               </p>
               <div className="mt-8 flex items-center justify-center">
                 <Button asChild size="lg">
-                  <Link to="/signup">Create Free Account</Link>
+                  <Link
+                    onClick={() =>
+                      trackCtaClick(client, "create_free_account", {
+                        location: "/guides",
+                        variant: "guide_directory",
+                      })
+                    }
+                    to="/signup"
+                  >
+                    Create Free Account
+                  </Link>
                 </Button>
               </div>
             </div>

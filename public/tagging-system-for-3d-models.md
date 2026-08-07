@@ -6,14 +6,14 @@ Design a practical tagging system for 3D model libraries so STL, 3MF, OBJ, and P
 A good tag system does not try to describe everything. It captures the dimensions people actually search by later: project, part type, status, customer, printer context, and kit membership.
 STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. In practice, that means STL Shelf treats tags as a core organization layer inside a private 3D model library instead of as an optional afterthought.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

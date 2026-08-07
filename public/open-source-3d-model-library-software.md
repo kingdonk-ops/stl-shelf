@@ -6,14 +6,14 @@ Open-source 3D model library software for organizing private 3D printing archive
 Open-source 3D model library software sits at the intersection of ownership, archive management, and deployment choice. Buyers in this category usually care about keeping their library private and structured without committing themselves to a closed system.
 STL Shelf fits here because it is open source, self-hostable, and also available as a hosted version managed by us.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -41,7 +41,7 @@ STL Shelf fits here because it is open source, self-hostable, and also available
 
 - Faster onboarding.
 - Less operational overhead.
-- Clearer commercial path for most users.
+- A managed experience for most users.
 
 ## Where STL Shelf fits
 
@@ -63,7 +63,7 @@ No. They should focus on ownership, privacy, control, and deployment choice at a
 
 ### Does STL Shelf support private archives?
 
-Yes. Private archive management is central to the product positioning.
+Yes. Private archive management is central to the product.
 
 ## Related links
 

@@ -7,34 +7,34 @@ const resources = [
   {
     title: "How to Organize STL Files",
     description:
-      "The main problem-solving page for users searching how to organize STL files in a private library.",
+      "Centralize scattered models, apply useful tags, and keep revisions connected in one private library.",
     href: "/how-to-organize-stl-files",
     icon: FolderSearch,
-    eyebrow: "Pillar",
+    eyebrow: "Start here",
   },
   {
     title: "STL File Management Software",
     description:
-      "Category page for users evaluating software to organize, catalog, and version STL files.",
+      "See how dedicated library software makes models easier to find, inspect, version, and reuse.",
     href: "/stl-file-management-software",
     icon: Wrench,
-    eyebrow: "Category",
+    eyebrow: "Manage your files",
   },
   {
     title: "Private 3D Model Library Software",
     description:
-      "Ownership-first positioning for users who want a private archive instead of a marketplace or social tool.",
+      "Keep your own designs, paid assets, and repeat jobs organized without public sharing or marketplace noise.",
     href: "/private-3d-model-library-software",
     icon: Lock,
-    eyebrow: "Pillar",
+    eyebrow: "Keep it private",
   },
   {
     title: "Self-Hosted 3D Model Library Software",
     description:
-      "Open-source and self-hosted positioning with the hosted version managed by us as the simpler path.",
+      "Use the managed service for the simplest experience, with self-hosting available when control is required.",
     href: "/self-hosted-3d-model-library-software",
     icon: Server,
-    eyebrow: "Cluster",
+    eyebrow: "Hosting options",
   },
 ];
 

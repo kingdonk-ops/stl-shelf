@@ -4,16 +4,16 @@ Canonical: https://stl-shelf.com/stl-version-control-for-makers
 
 A maker-focused guide to STL version control using model records, revision notes, browser preview, and private archive structure.
 The maker version-control problem is simple: keep the history visible, keep the current revision obvious, and keep earlier files accessible when the new change turns out to be wrong.
-This page frames version control from a practical workshop perspective instead of from a software-engineering perspective.
+For a practical workshop, version control means knowing what changed, which revision prints correctly, and how to return to an earlier result.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

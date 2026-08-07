@@ -25,25 +25,6 @@ export type GuidePageData = {
   ctaDescription: string;
 };
 
-export type GuideIndexPath =
-  | "/organize-stl-files"
-  | "/stl-file-organizer"
-  | "/organize-3mf-files"
-  | "/organize-obj-files"
-  | "/version-control-for-stl-files"
-  | "/tagging-system-for-3d-models"
-  | "/private-3d-model-library"
-  | "/self-hosted-3d-model-library"
-  | "/3d-model-preview-in-browser"
-  | "/stop-stl-folder-chaos";
-
-export type GuideIndexEntry = {
-  id: string;
-  path: GuideIndexPath;
-  listTitle: string;
-  description: string;
-};
-
 const defaultIsItems = [
   "A private library for your STL, 3MF, and OBJ files",
   "Searchable tags that keep projects and parts organized",
@@ -220,59 +201,6 @@ export const guidePages = {
     ],
     ctaTitle: "Organize your 3MF projects cleanly",
     ctaDescription: "Use a private workflow that keeps print-ready files easy to find.",
-  },
-  organizeObjFiles: {
-    id: "organize-obj-files",
-    path: "/organize-obj-files",
-    listTitle: "Organize OBJ Files for 3D Printing",
-    title: "How to Organize OBJ Files for 3D Printing Projects | STL Shelf",
-    description:
-      "Organize OBJ assets for 3D printing in a private library with tags, browser preview, and version history instead of scattered folders.",
-    h1: "How to organize OBJ files for 3D printing projects",
-    intro:
-      "OBJ assets can include variants, remixes, and supports, so naming alone is rarely enough to keep a private 3D printing library organized.",
-    problem: [
-      "OBJ files often live in separate project directories with little shared structure.",
-      "As revisions grow, people end up with final files that are impossible to trust.",
-      "Searching across multiple folders slows down handoff and production.",
-    ],
-    steps: [
-      {
-        title: "Collect OBJ assets in one library",
-        description: "Bring all project assets into a private hub with consistent naming.",
-      },
-      {
-        title: "Tag by role and project",
-        description:
-          "Use tags like source, printable, support, kit, and client to keep context visible.",
-      },
-      {
-        title: "Keep iteration history",
-        description: "Store each revision as a version so you always know what changed and when.",
-      },
-    ],
-    isItems: defaultIsItems,
-    isNotItems: defaultIsNotItems,
-    faqs: [
-      {
-        question: "Can OBJ files be previewed in-browser?",
-        answer: "Yes. STL Shelf includes browser preview for faster inspection before printing.",
-      },
-      {
-        question: "Can I manage OBJ and STL together?",
-        answer: "Yes. STL Shelf supports mixed-format libraries in one workflow.",
-      },
-      {
-        question: "Does STL Shelf publish OBJ files publicly?",
-        answer: "No. STL Shelf is private and does not include sharing features.",
-      },
-      {
-        question: "Can I keep a full change trail for OBJ assets?",
-        answer: "Yes. Version history keeps revisions ordered and recoverable.",
-      },
-    ],
-    ctaTitle: "Get OBJ projects under control",
-    ctaDescription: "Use tags, preview, and versions to prevent lost asset history.",
   },
   versionControlForStlFiles: {
     id: "version-control-for-stl-files",
@@ -536,22 +464,3 @@ export const guidePages = {
     ctaDescription: "Start organizing STL files with tags, preview, and version history.",
   },
 } as const satisfies Record<string, GuidePageData>;
-
-export const guideList: readonly GuideIndexEntry[] = [
-  guidePages.organizeStlFiles,
-  guidePages.stlFileOrganizer,
-  guidePages.organize3mfFiles,
-  guidePages.organizeObjFiles,
-  guidePages.versionControlForStlFiles,
-  guidePages.taggingSystemFor3dModels,
-  guidePages.private3dModelLibrary,
-  {
-    id: "self-hosted-3d-model-library",
-    path: "/self-hosted-3d-model-library",
-    listTitle: "Self-Hosted 3D Model Library",
-    description:
-      "Deployment prerequisites, required services, and self-hosted setup notes for STL Shelf.",
-  },
-  guidePages.modelPreviewInBrowser,
-  guidePages.stopStlFolderChaos,
-] as const;

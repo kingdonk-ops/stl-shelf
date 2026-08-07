@@ -7,17 +7,17 @@ Use the hosted version managed by us for the simplest path. Self-hosting is avai
 Markdown mirrors are available by appending `.md` to page URLs. The homepage mirror is `/index.html.md`.
 
 ## Best starting points
-- [Homepage](https://stl-shelf.com/index.html.md): Product summary, category definition, and core internal links.
-- [Guides hub](https://stl-shelf.com/guides.md): Main content index for pillar pages, guides, comparisons, and open-source pages.
-- [FAQs](https://stl-shelf.com/faqs.md): High-intent FAQ content for search snippets and LLM extraction.
+- [Homepage](https://stl-shelf.com/index.html.md): Product overview, capabilities, and useful next steps.
+- [Guides hub](https://stl-shelf.com/guides.md): Task-based index for organization, repeat work, privacy, comparisons, and hosting choices.
+- [FAQs](https://stl-shelf.com/faqs.md): Direct answers to common product questions.
 
-## Primary intent pages
-- [STL file management software](https://stl-shelf.com/stl-file-management-software.md): Category-definition page.
-- [How to organize STL files](https://stl-shelf.com/how-to-organize-stl-files.md): Main problem-solving page.
-- [3D print file organization](https://stl-shelf.com/3d-print-file-organization.md): Mixed-format library page.
-- [Private 3D model library software](https://stl-shelf.com/private-3d-model-library-software.md): Ownership-first positioning page.
+## Choose a starting point
+- [STL file management software](https://stl-shelf.com/stl-file-management-software.md): Dedicated organization software for private model archives.
+- [How to organize STL files](https://stl-shelf.com/how-to-organize-stl-files.md): A practical organization workflow.
+- [3D print file organization](https://stl-shelf.com/3d-print-file-organization.md): One library for mixed file formats.
+- [Private 3D model library software](https://stl-shelf.com/private-3d-model-library-software.md): Private ownership without marketplace behavior.
 
-## Supporting guides
+## Organize and improve your library
 - [Organize STL files](https://stl-shelf.com/organize-stl-files.md)
 - [Best way to organize STL files](https://stl-shelf.com/best-way-to-organize-stl-files.md)
 - [How to manage large STL libraries](https://stl-shelf.com/how-to-manage-large-stl-libraries.md)

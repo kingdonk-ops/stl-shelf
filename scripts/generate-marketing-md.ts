@@ -1,11 +1,8 @@
 import path from "node:path";
 import { mkdir, writeFile } from "node:fs/promises";
+import { guideCollections } from "../src/components/marketing/guides/guide-directory";
 import { guidePages, type GuidePageData } from "../src/components/marketing/guides/guides-data";
-import {
-  seoPageGroups,
-  seoPageList,
-  type SeoPageData,
-} from "../src/components/marketing/seo/seo-pages-data";
+import { seoPageList, type SeoPageData } from "../src/components/marketing/seo/seo-pages-data";
 import { marketingFaqs } from "../src/components/marketing/sections/faq.data";
 
 const SITE_URL = "https://stl-shelf.com";
@@ -20,7 +17,7 @@ type MarkdownPage = {
   sections: string[];
 };
 
-const legacyGuidePages = [guidePages.modelPreviewInBrowser, guidePages.organizeObjFiles] as const;
+const legacyGuidePages = [guidePages.modelPreviewInBrowser] as const;
 
 const REQUIRED_PATHS: SitePath[] = [
   "/",
@@ -112,10 +109,10 @@ function renderSeoPage(page: SeoPageData): MarkdownPage {
     title: page.h1,
     summary: [page.description, ...page.intro],
     sections: [
-      "## Category definition",
+      "## What STL Shelf does",
       ...page.semanticStatements.map((statement) => `- ${statement}`),
       "",
-      "## STL Shelf helps you",
+      "## What you can do",
       ...page.featureList.map((item) => `- ${item}`),
       "",
       `## ${page.workflowTitle}`,
@@ -207,7 +204,7 @@ function buildFaqsPage(): MarkdownPage {
     path: "/faqs",
     title: "STL Shelf FAQs",
     summary: [
-      "High-intent FAQ content for STL Shelf covering organization, archive management, product positioning, open source, and self-hosting.",
+      "Answers about STL Shelf organization, archive management, privacy, open source, and hosting choices.",
     ],
     sections: [
       "## Frequently asked questions",
@@ -221,13 +218,15 @@ function buildFaqsPage(): MarkdownPage {
 function buildGuidesPage(): MarkdownPage {
   return {
     path: "/guides",
-    title: "STL Shelf Guides, Comparisons, and Category Pages",
+    title: "Guides for Organizing a Private 3D Model Library",
     summary: [
-      "The main content hub for STL Shelf pillar pages, supporting guides, comparison pages, and open-source/self-hosted pages.",
+      "Practical guidance for organizing, tagging, versioning, previewing, and protecting a private 3D model library.",
     ],
     sections: [
-      ...seoPageGroups.flatMap((group) => [
+      ...guideCollections.flatMap((group) => [
         `## ${group.title}`,
+        group.description,
+        "",
         ...group.pages.map(
           (page) => `- [${page.listTitle}](${markdownUrl(page.path)}): ${page.description}`,
         ),
@@ -249,7 +248,7 @@ function buildPricingPage(): MarkdownPage {
     sections: [
       "## What pricing supports",
       "- Hosted STL Shelf plans.",
-      "- Commercial path for the managed version.",
+      "- A managed version without infrastructure work.",
       "- Plan details and limits can change over time.",
       "",
       "## Source of truth",
@@ -277,7 +276,7 @@ function buildAboutPage(): MarkdownPage {
       "STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.",
       "It is built for makers, hobbyists, design iterators, digital hoarders, and small print farms.",
       "",
-      "## Positioning",
+      "## Built for private libraries",
       "- Private 3D model library software.",
       "- Open source and self-hostable.",
       "- Hosted version managed by us for the simplest path.",

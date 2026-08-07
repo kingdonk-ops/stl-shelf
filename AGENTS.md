@@ -6,7 +6,7 @@ Package manager: Bun (`bun@1.3.5`). Use `bun` commands, not npm/yarn.
 
 Command gotchas (everything else is in `package.json` scripts):
 
-- Build: `bun build` — do not run if the dev server is already running.
+- Build: `bun run build` — do not run if the dev server is already running; `bun build` invokes Bun's native bundler.
 - Tests: `bun run test` — NOT `bun test`, which invokes Bun's own runner and breaks on `vi.hoisted`.
 
 Quality gate:

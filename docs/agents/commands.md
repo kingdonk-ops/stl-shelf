@@ -4,7 +4,7 @@
 
 - `bun install` - Install dependencies
 - `bun dev` - Start development server (port 3000)
-- `bun build` - Build for production
+- `bun run build` - Build for production with Vite (`bun build` invokes Bun's native bundler)
 - `bun preview` - Preview production build
 - `bun start` - Run pending migrations, then start production server
 
@@ -21,7 +21,7 @@
 - `bun format` - Format code with oxfmt
 - `bun check` - Lint + format check
 - `bun check-types` - Type check with tsgo
-- `bun test` - Run tests with Vitest
+- `bun run test` - Run tests with Vitest (`bun test` invokes Bun's native test runner)
 
 Constraints:
 

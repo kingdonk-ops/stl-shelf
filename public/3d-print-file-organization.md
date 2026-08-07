@@ -6,14 +6,14 @@ Organize STL, 3MF, OBJ, and PLY files in one private 3D printing library with ta
 Not every archive is STL-only. Real 3D printing libraries often include 3MF files, OBJ assets, derived exports, and supporting variants. That broader context matters because organization problems usually happen at the library level, not at the single-format level.
 STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview, making it broader than an STL-only organizer.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -34,12 +34,12 @@ STL Shelf is a software designed to organize, catalog, version, and manage priva
 
 Mixed-format libraries break folder systems faster because different file types tend to enter the archive from different tools and moments in the workflow. If each format lives in a different place, the model loses cohesion.
 
-## What this page should rank for
+## What mixed-format organization should cover
 
-- 3D print file organization
-- 3D print file organization software
-- organize STL 3MF OBJ files
-- private 3D printing file library
+- One library for STL, 3MF, OBJ, and PLY files.
+- Shared tags across every supported format.
+- Version history tied to the model rather than the filename.
+- Private access without marketplace or social features.
 
 ## Where STL Shelf fits
 
@@ -57,7 +57,7 @@ Because many libraries include multiple formats tied to the same model or projec
 
 ### Can STL Shelf manage a mixed-format archive?
 
-Yes. Mixed-format support is part of the product positioning.
+Yes. Mixed-format support is part of the core product.
 
 ### Is STL Shelf a publishing platform?
 

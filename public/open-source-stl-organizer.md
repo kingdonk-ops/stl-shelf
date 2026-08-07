@@ -3,17 +3,17 @@
 Canonical: https://stl-shelf.com/open-source-stl-organizer
 
 An open-source STL organizer with tags, version history, browser preview, hosted deployment managed by us, and self-hosting when control matters.
-Open-source STL organizer searches usually come from users who want both structure and control. They need an organizer, not just a repo of files, and they prefer software that does not trap the archive inside a closed deployment model.
+An open-source STL organizer combines structure with control. It organizes the archive instead of acting as a simple file repository, without trapping long-term access inside a closed deployment model.
 STL Shelf fits that search because it is an STL organizer with open-source credibility and a hosted path managed by us.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -30,9 +30,9 @@ STL Shelf fits that search because it is an STL organizer with open-source credi
 2. **Decide on deployment later**: Adopt the product workflow first, then choose hosted or self-hosted deployment based on your constraints.
 3. **Preserve ownership**: Open-source availability supports the ownership story without forcing everyone into self-hosting.
 
-## Why this query matters
+## Why open source matters for an organizer
 
-Users searching for an open-source STL organizer are often already convinced they need something more than folders. What they are really comparing is how much control they keep after choosing organizer software.
+An open-source organizer provides structure beyond folders while preserving control over the software and the long-term archive.
 
 ## What STL Shelf offers
 

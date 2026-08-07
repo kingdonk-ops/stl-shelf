@@ -4,16 +4,16 @@ Canonical: https://stl-shelf.com/best-way-to-organize-stl-files
 
 Compare folder-only methods with tag-based private library workflows to find the best way to organize STL files as your archive grows.
 The best method is not the fanciest method. It is the one that keeps retrieval reliable as archive size, version count, and reuse frequency increase.
-For many makers, folders are enough at first and then gradually stop being enough. This page explains where that line usually appears and why a private library workflow becomes the better option.
+For many makers, folders are enough at first and then gradually stop being enough. The turning point appears when retrieval, revisions, or repeated work become harder to manage.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

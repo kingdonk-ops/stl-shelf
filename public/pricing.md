@@ -8,7 +8,7 @@ Use the canonical HTML page as the source of truth for the latest plan details.
 ## What pricing supports
 
 - Hosted STL Shelf plans.
-- Commercial path for the managed version.
+- A managed version without infrastructure work.
 - Plan details and limits can change over time.
 
 ## Source of truth

@@ -6,14 +6,14 @@ Replace messy STL folders with a private 3D model library that uses tags, versio
 Most messy STL libraries are not messy because the owner is disorganized. They are messy because generic folders are weak tools for a workflow that involves downloads, remixes, client jobs, repeated exports, and multiple file formats.
 The way out is not a heroic weekend cleanup. It is a better operating model for the archive.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -61,7 +61,7 @@ No. It is positioned as a private 3D model library with tags, version history, a
 
 ### Can I keep the archive private?
 
-Yes. Private ownership is a core part of the product positioning.
+Yes. Private ownership is a core part of the product.
 
 ## Related links
 

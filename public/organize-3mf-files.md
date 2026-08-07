@@ -6,14 +6,14 @@ Organize 3MF files in a private library with searchable tags, version history, a
 3MF files often carry more workflow context than plain STL exports because they are closer to print intent. That makes organization even more important. When they are buried in slicer folders, the cost is not just retrieval time. It is lost certainty.
 STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview, so mixed-format libraries can stay coherent.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries

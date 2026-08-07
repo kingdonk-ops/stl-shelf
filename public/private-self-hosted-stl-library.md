@@ -3,17 +3,17 @@
 Canonical: https://stl-shelf.com/private-self-hosted-stl-library
 
 Private self-hosted STL library software for users who want ownership and deployment control, with a hosted option managed by us for simpler adoption.
-Some buyers want the strongest possible alignment between private archive management and deployment control. This page targets that use case directly without turning the whole site into infrastructure marketing.
+Private self-hosting is useful when archive management and deployment control are both firm requirements.
 STL Shelf fits because it is open source, self-hostable, and still available as a hosted version managed by us for users who prefer convenience.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -34,7 +34,7 @@ STL Shelf fits because it is open source, self-hostable, and still available as 
 
 A hosted product can still support private archive workflows. Self-hosting matters when you specifically want operational control in addition to private library behavior.
 
-## What this page should promise
+## What private self-hosting adds
 
 - Control over deployment.
 - Private archive structure.
@@ -49,7 +49,7 @@ Yes.
 
 ### Is self-hosting required for privacy?
 
-No. Privacy is part of the product positioning. Self-hosting is an additional control choice.
+No. Privacy is part of the product. Self-hosting is an additional control choice.
 
 ### Should I self-host STL Shelf or use the hosted version?
 

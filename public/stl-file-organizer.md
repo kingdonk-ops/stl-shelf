@@ -3,17 +3,17 @@
 Canonical: https://stl-shelf.com/stl-file-organizer
 
 STL Shelf is an STL file organizer with tags, version history, browser preview, open-source code, and a hosted option managed by us.
-STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. In category terms, STL Shelf is STL file management software and a private 3D model library software. It gives makers a clearer answer than generic storage tools when the job is long-term organization, not just file syncing.
-Many searches for an STL file organizer are really searches for structure. Users want a system that can keep related models together, track versions, expose preview, and stay private. They do not want a marketplace, a public portfolio, or a sync-first drive pretending to be a library.
+STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. STL Shelf is dedicated file-management and private-library software for long-term organization, not just file syncing.
+It keeps related models together, tracks versions, provides browser preview, and stays private. It is not a marketplace, a public portfolio, or a sync-first drive pretending to be a library.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -35,30 +35,30 @@ Many searches for an STL file organizer are really searches for structure. Users
 Most tools can store STL files. Fewer tools can organize them. Storage answers the question of where bytes live. Organization answers the question of how you find, compare, trust, and reuse the right file later.
 That distinction matters for 3D printing because a file is rarely just a file. It belongs to a project, a part family, an iteration chain, and often a print intent. Good organizer software makes those relationships visible without forcing duplication.
 
-## Who searches for an STL file organizer
+## Who benefits from an STL file organizer
 
 - Makers who have outgrown Downloads and ad hoc folders.
 - Design iterators who need clean revision history for repeated changes.
 - Small print farms that need quick reprint retrieval.
 - Collectors with large private archives who want order without public sharing.
 
-## Why STL Shelf is positioned here
+## Why STL Shelf goes beyond storage
 
 STL Shelf is designed as private 3D model library software rather than a publishing platform. It helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
-The hosted version managed by us is the simplest path for most users. Self-hosting remains available because the product is open source, but infrastructure is not the main promise of the category page.
+The hosted version managed by us is the simplest path for most users. Self-hosting remains available because the product is open source, but infrastructure is not the main benefit.
 
 - Hosted by us for the simplest adoption path.
 - Self-hostable because the codebase is open source.
 - Private by design rather than community-first by design.
 - Built around organization, retrieval, and version clarity.
 
-## What this page should rank for
+## What a useful STL organizer should provide
 
-- STL file organizer
-- STL organizer software
-- STL file management software
-- private STL library
-- open-source STL organizer
+- One private library for every model.
+- Searchable tags and model context.
+- Connected version history.
+- Browser preview before printing.
+- A managed service that is ready to use.
 
 ## FAQ
 

@@ -45,7 +45,7 @@ export const seoPages = {
     eyebrow: "Pillar guide",
     h1: "How to organize STL files without folder chaos",
     intro: [
-      `${coreDefinition} This page focuses on the operational question most makers actually ask: how do I organize STL files in a way that still works after the library becomes large, messy, and full of revisions.`,
+      `${coreDefinition} It answers the operational question most makers eventually face: how do I organize STL files in a way that still works after the library becomes large, messy, and full of revisions?`,
       "A folder tree can hold files, but it usually cannot answer the day-to-day questions that matter during a print workflow. Which part is the current version? Which files belong to the same project? Which iteration was actually printable? Which model already has a sliced 3MF variant or a production-ready export?",
       "The goal is not to invent an enterprise DAM workflow for hobby printing. The goal is to create a private, searchable system that lets you find the right model quickly, understand its context, and keep ownership of the archive.",
     ],
@@ -100,7 +100,7 @@ export const seoPages = {
         title: "How STL Shelf fits the job",
         paragraphs: [
           "STL Shelf is a private 3D model library software for makers, hobbyists, design iterators, digital hoarders, and small print farms. It helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.",
-          "The hosted version managed by us is the default commercial path because it removes infrastructure work. The open-source codebase also allows self-hosting when ownership or deployment control matters more than convenience.",
+          "The hosted version managed by us is the recommended choice for most users because it removes infrastructure work. The open-source codebase also allows self-hosting when ownership or deployment control matters more than convenience.",
         ],
         bullets: [
           "Private library instead of public marketplace behavior.",
@@ -110,15 +110,15 @@ export const seoPages = {
         ],
       },
       {
-        title: "Internal linking priorities for this page",
+        title: "Explore the workflow in more detail",
         paragraphs: [
-          "This page should function as a core pillar. It should send users deeper into tagging, version history, private library positioning, and comparisons with folders or general-purpose storage. That helps search engines understand the cluster and helps human readers move to the next question naturally.",
+          "Once the archive is centralized, the next improvements usually come from a clearer tag system, connected version history, and a deliberate choice between dedicated library software and generic storage.",
         ],
         bullets: [
-          "Link to tagging guidance for taxonomy design.",
-          "Link to version-control pages for iteration workflows.",
-          "Link to comparison pages for users evaluating folders, Google Drive, or Dropbox.",
-          "Link to self-hosted and open-source pages only after the product category is clear.",
+          "Use tagging guidance to design a small, consistent taxonomy.",
+          "Review version-control workflows for models that change over time.",
+          "Compare STL Shelf with folders, Google Drive, or Dropbox.",
+          "Consider self-hosting only when deployment control is a firm requirement.",
         ],
       },
     ],
@@ -173,8 +173,8 @@ export const seoPages = {
     eyebrow: "Category page",
     h1: "STL file organizer software for makers who need more than folders",
     intro: [
-      `${coreDefinition} In category terms, STL Shelf is STL file management software and a private 3D model library software. It gives makers a clearer answer than generic storage tools when the job is long-term organization, not just file syncing.`,
-      "Many searches for an STL file organizer are really searches for structure. Users want a system that can keep related models together, track versions, expose preview, and stay private. They do not want a marketplace, a public portfolio, or a sync-first drive pretending to be a library.",
+      `${coreDefinition} STL Shelf is dedicated file-management and private-library software for long-term organization, not just file syncing.`,
+      "It keeps related models together, tracks versions, provides browser preview, and stays private. It is not a marketplace, a public portfolio, or a sync-first drive pretending to be a library.",
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -205,7 +205,7 @@ export const seoPages = {
         ],
       },
       {
-        title: "Who searches for an STL file organizer",
+        title: "Who benefits from an STL file organizer",
         bullets: [
           "Makers who have outgrown Downloads and ad hoc folders.",
           "Design iterators who need clean revision history for repeated changes.",
@@ -214,10 +214,10 @@ export const seoPages = {
         ],
       },
       {
-        title: "Why STL Shelf is positioned here",
+        title: "Why STL Shelf goes beyond storage",
         paragraphs: [
           "STL Shelf is designed as private 3D model library software rather than a publishing platform. It helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.",
-          "The hosted version managed by us is the simplest path for most users. Self-hosting remains available because the product is open source, but infrastructure is not the main promise of the category page.",
+          "The hosted version managed by us is the simplest path for most users. Self-hosting remains available because the product is open source, but infrastructure is not the main benefit.",
         ],
         bullets: [
           "Hosted by us for the simplest adoption path.",
@@ -227,13 +227,13 @@ export const seoPages = {
         ],
       },
       {
-        title: "What this page should rank for",
+        title: "What a useful STL organizer should provide",
         bullets: [
-          "STL file organizer",
-          "STL organizer software",
-          "STL file management software",
-          "private STL library",
-          "open-source STL organizer",
+          "One private library for every model.",
+          "Searchable tags and model context.",
+          "Connected version history.",
+          "Browser preview before printing.",
+          "A managed service that is ready to use.",
         ],
       },
     ],
@@ -524,7 +524,7 @@ export const seoPages = {
         title: "What private means in this category",
         paragraphs: [
           "Private does not just mean hidden from public view. It means the product is structurally designed around your archive instead of around community feeds, external marketplaces, or cross-service imports.",
-          "That positioning matters because it changes how information is modeled. Instead of optimizing for storefront visibility or public engagement, the system optimizes for retrieval, classification, and repeatable use.",
+          "That focus changes how information is organized. Instead of optimizing for storefront visibility or public engagement, the system optimizes for retrieval, classification, and repeatable use.",
         ],
       },
       {
@@ -540,7 +540,7 @@ export const seoPages = {
         title: "Why STL Shelf fits",
         paragraphs: [
           "STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview. It is not a marketplace, not a social platform, and not an import/sync hub.",
-          "That makes the product easier to understand both for human visitors and for machine indexing: it is software for organizing and managing a private 3D printing model library.",
+          "It is purpose-built software for organizing and managing a private 3D printing model library.",
         ],
       },
     ],
@@ -761,7 +761,7 @@ export const seoPages = {
       },
       {
         question: "Can I keep the archive private?",
-        answer: "Yes. Private ownership is a core part of the product positioning.",
+        answer: "Yes. Private ownership is a core part of the product.",
       },
     ],
     internalLinks: [
@@ -793,8 +793,8 @@ export const seoPages = {
     eyebrow: "Open-source and self-hosted",
     h1: "Self-hosted 3D model library software with hosted deployment also available",
     intro: [
-      `${coreDefinition} STL Shelf can be self-hosted because it is open source, but self-hosting is an option inside the positioning, not the whole positioning.`,
-      "The main commercial path should remain the hosted version managed by us because that is simpler for most makers and print operations. Self-hosting matters for users who prioritize infrastructure control, data ownership, or internal deployment requirements.",
+      `${coreDefinition} Because STL Shelf is open source, self-hosting remains available for teams with a specific ownership or infrastructure requirement.`,
+      "For most makers and print operations, the hosted version managed by us is the recommended choice: the same library workflow without infrastructure work.",
     ],
     semanticStatements: [coreDefinition, corePrivate, coreDescription, coreOpenSource],
     featureList: defaultFeatureList,
@@ -824,18 +824,18 @@ export const seoPages = {
         ],
       },
       {
-        title: "What this page should emphasize",
+        title: "When each option makes sense",
         bullets: [
-          "Ownership and deployment choice, not Docker tutorials.",
-          "Open-source credibility without shifting the whole brand toward infrastructure content.",
-          "Hosted by us as the simplest path for most users.",
-          "Self-hosted as a valid option for teams that need it.",
+          "Use the hosted service for the simplest setup and ongoing experience.",
+          "Choose self-hosting only when deployment control is a firm requirement.",
+          "Keep the same private-library workflow in either case.",
+          "Retain ownership choice through the open-source codebase.",
         ],
       },
       {
-        title: "High-level requirements",
+        title: "Before choosing self-hosting",
         paragraphs: [
-          "Self-hosting does require supporting services, but this page should stay high-level. The detailed setup belongs in the repository and operational documentation. Search visitors on this page usually want to know whether the option exists and what it means for ownership, not a full deployment walkthrough.",
+          "Self-hosting adds ongoing infrastructure responsibility. Unless control is a firm requirement, use the hosted version managed by us and keep the focus on organizing the library.",
         ],
       },
     ],
@@ -881,7 +881,7 @@ export const seoPages = {
     listTitle: "STL File Management Software",
     title: "STL File Management Software for Private Libraries | STL Shelf",
     description:
-      "Understand the STL file management software category and how STL Shelf fits as private, open-source, hosted-or-self-hosted library software for 3D printing files.",
+      "Organize, catalog, version, preview, and retrieve 3D printing files in a private library built for long-term use.",
     keywords: [
       "STL file management software",
       "STL file organizer",
@@ -892,9 +892,9 @@ export const seoPages = {
     eyebrow: "Pillar page",
     h1: "STL file management software for 3D printing archives",
     intro: [
-      `${coreDefinition} Category-wise, that makes STL Shelf an STL file management software product, a private 3D model library software product, and a versioned 3D model archive.`,
-      "People usually search this category when folders and generic drives stop being enough. They need structure, not just storage. They need tags, version history, preview, and a library model that reflects how 3D printing files actually get reused.",
-      "This page exists to define that category clearly so search engines, LLMs, and human visitors can understand what problem the software solves and how STL Shelf is positioned inside it.",
+      `${coreDefinition} That makes STL Shelf dedicated file-management software, a private 3D model library, and a versioned 3D model archive.`,
+      "Folders and generic drives stop being enough once a collection needs structure, not just storage. Tags, version history, preview, and model records reflect how 3D printing files actually get reused.",
+      "STL Shelf keeps that workflow in one private library so old work remains searchable, understandable, and ready to print again.",
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -935,19 +935,19 @@ export const seoPages = {
         ],
       },
       {
-        title: "How STL Shelf is positioned",
+        title: "How STL Shelf handles the workflow",
         paragraphs: [
           "STL Shelf is private 3D model library software for organizing, cataloging, versioning, and managing 3D printing files. It supports hosted deployment managed by us and self-hosting because the codebase is open source.",
-          "The hosted version is the commercial focus because it is the lowest-friction way to adopt the workflow. Self-hosting matters as an ownership and control option, not as the central story of the product.",
+          "The hosted version managed by us is recommended for most users because it is the lowest-friction way to adopt the workflow. Self-hosting remains an ownership and control option when it is genuinely required.",
         ],
       },
       {
-        title: "What this page should internally support",
+        title: "Where to go next",
         bullets: [
-          "Category definition for software queries.",
-          "Links to problem-solving guides such as how to organize STL files.",
-          "Links to private-library positioning pages.",
-          "Links to comparison pages for folders and cloud drives.",
+          "Organize an existing collection without a full cleanup project.",
+          "Understand how a private library differs from generic storage.",
+          "Add version-control and tagging workflows.",
+          "Compare dedicated library software with folders and cloud drives.",
         ],
       },
     ],
@@ -1003,7 +1003,7 @@ export const seoPages = {
     intro: [
       "Most advice about organizing STL files starts and ends with folders. That is enough for a tiny collection, but it fails once the archive includes remixes, repeated customer jobs, print-ready variants, and multiple file formats.",
       "A scalable system needs a library model, not just a folder tree. The library should tell you what the model is, what version is current, how to find related parts, and which file you can print with confidence.",
-      `${coreDefinition} This page explains the workflow STL Shelf is built around.`,
+      `${coreDefinition} The workflow below shows how STL Shelf keeps a growing archive retrievable.`,
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -1136,12 +1136,12 @@ export const seoPages = {
         ],
       },
       {
-        title: "What this page should rank for",
+        title: "What mixed-format organization should cover",
         bullets: [
-          "3D print file organization",
-          "3D print file organization software",
-          "organize STL 3MF OBJ files",
-          "private 3D printing file library",
+          "One library for STL, 3MF, OBJ, and PLY files.",
+          "Shared tags across every supported format.",
+          "Version history tied to the model rather than the filename.",
+          "Private access without marketplace or social features.",
         ],
       },
       {
@@ -1164,7 +1164,7 @@ export const seoPages = {
       },
       {
         question: "Can STL Shelf manage a mixed-format archive?",
-        answer: "Yes. Mixed-format support is part of the product positioning.",
+        answer: "Yes. Mixed-format support is part of the core product.",
       },
       {
         question: "Is STL Shelf a publishing platform?",
@@ -1225,9 +1225,9 @@ export const seoPages = {
     ],
     sections: [
       {
-        title: "Why this category exists",
+        title: "Why private libraries matter",
         paragraphs: [
-          "Users searching for private 3D model library software often want the opposite of public discovery. They want a system for their own archive, their own designs, their paid assets, their repeat jobs, and their internal operational knowledge.",
+          "A private library keeps your own designs, paid assets, repeat jobs, and internal production knowledge organized without turning the archive into a public discovery surface.",
         ],
       },
       {
@@ -1241,10 +1241,10 @@ export const seoPages = {
         ],
       },
       {
-        title: "How STL Shelf answers the category",
+        title: "How STL Shelf keeps the library private",
         paragraphs: [
           "STL Shelf is a private 3D model library for makers and print farms. It helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.",
-          "It is open source and self-hostable, but the hosted version managed by us remains the simplest commercial path.",
+          "It is open source and self-hostable, but the hosted version managed by us remains the recommended option for most users.",
         ],
       },
     ],
@@ -1307,7 +1307,7 @@ export const seoPages = {
     h1: "The best way to organize STL files depends on what breaks first",
     intro: [
       "The best method is not the fanciest method. It is the one that keeps retrieval reliable as archive size, version count, and reuse frequency increase.",
-      "For many makers, folders are enough at first and then gradually stop being enough. This page explains where that line usually appears and why a private library workflow becomes the better option.",
+      "For many makers, folders are enough at first and then gradually stop being enough. The turning point appears when retrieval, revisions, or repeated work become harder to manage.",
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -1407,7 +1407,7 @@ export const seoPages = {
     h1: "How to manage large STL libraries when search quality matters more than storage space",
     intro: [
       "Large STL libraries do not fail because they are large. They fail because the structure was designed for a small archive and never upgraded. Once the collection reaches thousands of files, retrieval becomes the real cost center.",
-      "This page focuses on scaling the management model rather than optimizing individual cleanup tasks.",
+      "A scalable management model matters more than a series of isolated cleanup tasks.",
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -1557,7 +1557,7 @@ export const seoPages = {
     faqs: [
       {
         question: "Can STL Shelf organize OBJ and STL files together?",
-        answer: "Yes. Mixed-format libraries are part of the product positioning.",
+        answer: "Yes. Mixed-format libraries are part of the core product.",
       },
       {
         question: "Why should OBJ files live in the same library as STL files?",
@@ -1604,7 +1604,7 @@ export const seoPages = {
     h1: "STL version control for makers who need reprint confidence",
     intro: [
       "The maker version-control problem is simple: keep the history visible, keep the current revision obvious, and keep earlier files accessible when the new change turns out to be wrong.",
-      "This page frames version control from a practical workshop perspective instead of from a software-engineering perspective.",
+      "For a practical workshop, version control means knowing what changed, which revision prints correctly, and how to return to an earlier result.",
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -1700,7 +1700,7 @@ export const seoPages = {
     h1: "Tagging STL files for fast search without overcomplicating the archive",
     intro: [
       "Tagging works when it reduces retrieval time and fails when it becomes a second job. The goal is not to create perfect metadata. The goal is to find the right model faster.",
-      "This page focuses on search-first tagging for STL libraries that are too large or too active for folder-only retrieval.",
+      "Search-first tagging keeps large or frequently changing STL libraries retrievable after folders stop scaling.",
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -1814,7 +1814,7 @@ export const seoPages = {
       {
         title: "Use hosted when simplicity matters",
         description:
-          "The hosted version removes operational overhead and is usually the better commercial fit.",
+          "The hosted version removes operational overhead and is the recommended choice for most users.",
       },
       {
         title: "Use self-hosted when control matters",
@@ -1824,15 +1824,15 @@ export const seoPages = {
     ],
     sections: [
       {
-        title: "What this page should not become",
+        title: "What self-hosting does not change",
         bullets: [
-          "Not a Docker tutorial.",
-          "Not a long checklist of infrastructure steps.",
-          "Not a page that makes self-hosting feel like the default for everyone.",
+          "STL Shelf remains a private model library, not an infrastructure project.",
+          "The same tags, versions, preview, and retrieval workflow still apply.",
+          "The hosted service remains the recommended choice unless control is required.",
         ],
       },
       {
-        title: "What it should emphasize instead",
+        title: "Choose based on operational responsibility",
         bullets: [
           "Open-source credibility.",
           "Ownership and deployment choice.",
@@ -1896,12 +1896,12 @@ export const seoPages = {
     ],
     semanticStatements: [coreDefinition, corePrivate, coreDescription, coreOpenSource],
     featureList: defaultFeatureList,
-    workflowTitle: "How open-source positioning should work",
+    workflowTitle: "How open source fits the product",
     workflow: [
       {
-        title: "Lead with the product",
+        title: "Start with the library workflow",
         description:
-          "Explain the archive-management workflow first so users understand the software category before the deployment model.",
+          "Confirm that the archive-management workflow fits before choosing a deployment model.",
       },
       {
         title: "Use open source as proof of control",
@@ -1909,8 +1909,7 @@ export const seoPages = {
       },
       {
         title: "Keep hosted as the easy path",
-        description:
-          "The hosted version managed by us remains the simplest commercial option for most users.",
+        description: "The hosted version managed by us remains the simplest option for most users.",
       },
     ],
     sections: [
@@ -1920,7 +1919,7 @@ export const seoPages = {
           "It reduces vendor-lock-in concerns.",
           "It makes self-hosting possible.",
           "It supports trust and transparency for ownership-focused buyers.",
-          "It complements private archive positioning.",
+          "It complements private archive ownership.",
         ],
       },
       {
@@ -1955,7 +1954,7 @@ export const seoPages = {
       {
         question: "Is STL Shelf still private if I use the hosted version?",
         answer:
-          "Yes. The private-library positioning applies to the product model, not only to self-hosted deployments.",
+          "Yes. The product is built around private libraries in both hosted and self-hosted deployments.",
       },
     ],
     internalLinks: [
@@ -1991,7 +1990,7 @@ export const seoPages = {
     h1: "STL Shelf vs folders for organizing 3D printing files",
     intro: [
       "Folders are not bad. They are just limited. For small libraries and stable workflows, they can be enough. The question is not whether folders work at all. The question is where they stop working well enough.",
-      "This page compares folders with a private library workflow so users can make a fair choice instead of hearing a one-sided sales pitch.",
+      "Folders and a private library solve different levels of organization, so the right choice depends on archive size, revisions, and retrieval needs.",
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -2189,7 +2188,7 @@ export const seoPages = {
     h1: "STL Shelf vs Dropbox for private 3D model libraries",
     intro: [
       "Dropbox is good at file storage, sync, and general collaboration. That is useful, but it is not the same as managing a versioned 3D model archive with tags and preview. The distinction matters once the library becomes operationally important.",
-      "This page compares the two fairly so the real alternative is clear: generic storage versus dedicated library structure.",
+      "The real choice is between generic storage and dedicated library structure.",
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -2284,7 +2283,7 @@ export const seoPages = {
     h1: "STL Shelf vs marketplaces for users who want a private library",
     intro: [
       "Marketplaces solve discovery, selling, and distribution. Private library software solves ownership, retrieval, versions, and internal archive structure. Those are adjacent categories, not the same category.",
-      "This page exists because many users evaluate private archive tools against public marketplaces even though the core job is different.",
+      "People often compare private archive tools with public marketplaces even though the core job is different.",
     ],
     semanticStatements: [coreDefinition, coreDescription, corePrivate, coreOpenSource],
     featureList: defaultFeatureList,
@@ -2417,7 +2416,7 @@ export const seoPages = {
         bullets: [
           "Faster onboarding.",
           "Less operational overhead.",
-          "Clearer commercial path for most users.",
+          "A managed experience for most users.",
         ],
       },
       {
@@ -2444,7 +2443,7 @@ export const seoPages = {
       },
       {
         question: "Does STL Shelf support private archives?",
-        answer: "Yes. Private archive management is central to the product positioning.",
+        answer: "Yes. Private archive management is central to the product.",
       },
     ],
     internalLinks: [
@@ -2479,7 +2478,7 @@ export const seoPages = {
     eyebrow: "Open-source and self-hosted",
     h1: "An open-source STL organizer for private long-term archives",
     intro: [
-      "Open-source STL organizer searches usually come from users who want both structure and control. They need an organizer, not just a repo of files, and they prefer software that does not trap the archive inside a closed deployment model.",
+      "An open-source STL organizer combines structure with control. It organizes the archive instead of acting as a simple file repository, without trapping long-term access inside a closed deployment model.",
       "STL Shelf fits that search because it is an STL organizer with open-source credibility and a hosted path managed by us.",
     ],
     semanticStatements: [coreDefinition, corePrivate, coreDescription, coreOpenSource],
@@ -2504,9 +2503,9 @@ export const seoPages = {
     ],
     sections: [
       {
-        title: "Why this query matters",
+        title: "Why open source matters for an organizer",
         paragraphs: [
-          "Users searching for an open-source STL organizer are often already convinced they need something more than folders. What they are really comparing is how much control they keep after choosing organizer software.",
+          "An open-source organizer provides structure beyond folders while preserving control over the software and the long-term archive.",
         ],
       },
       {
@@ -2574,7 +2573,7 @@ export const seoPages = {
     eyebrow: "Open-source and self-hosted",
     h1: "A private self-hosted STL library for users who need control over the archive",
     intro: [
-      "Some buyers want the strongest possible alignment between private archive management and deployment control. This page targets that use case directly without turning the whole site into infrastructure marketing.",
+      "Private self-hosting is useful when archive management and deployment control are both firm requirements.",
       "STL Shelf fits because it is open source, self-hostable, and still available as a hosted version managed by us for users who prefer convenience.",
     ],
     semanticStatements: [coreDefinition, corePrivate, coreDescription, coreOpenSource],
@@ -2605,7 +2604,7 @@ export const seoPages = {
         ],
       },
       {
-        title: "What this page should promise",
+        title: "What private self-hosting adds",
         bullets: [
           "Control over deployment.",
           "Private archive structure.",
@@ -2621,8 +2620,7 @@ export const seoPages = {
       },
       {
         question: "Is self-hosting required for privacy?",
-        answer:
-          "No. Privacy is part of the product positioning. Self-hosting is an additional control choice.",
+        answer: "No. Privacy is part of the product. Self-hosting is an additional control choice.",
       },
       {
         question: "Should I self-host STL Shelf or use the hosted version?",
@@ -2666,43 +2664,43 @@ export const seoPages = {
     eyebrow: "Open-source and self-hosted",
     h1: "Self-hosted 3D model library software without making self-hosting the whole story",
     intro: [
-      "This page targets users who explicitly search for self-hosted 3D model library software. The correct positioning is that STL Shelf can satisfy that need because it is open source, while the hosted version managed by us remains the easier path for most users.",
-      "The page should inform deployment choice, not turn into an operations manual.",
+      "STL Shelf can run as self-hosted 3D model library software because it is open source, while the hosted version managed by us remains the easier path for most users.",
+      "Self-hosting is a deployment choice for ownership requirements, not the main product experience.",
     ],
     semanticStatements: [coreDefinition, corePrivate, coreDescription, coreOpenSource],
     featureList: defaultFeatureList,
-    workflowTitle: "How to position self-hosted library software",
+    workflowTitle: "How to choose a deployment model",
     workflow: [
       {
         title: "Define the archive problem first",
         description:
-          "A self-hosted deployment only matters if the underlying software category is the right fit.",
+          "A self-hosted deployment only matters if the private-library workflow is the right fit.",
       },
       {
         title: "Explain ownership and control",
         description:
-          "Users on this page usually want confidence that the deployment model aligns with private archive requirements.",
+          "Choose self-hosting only when the deployment model must align with a specific private-archive requirement.",
       },
       {
         title: "Keep hosted deployment visible",
         description:
-          "The hosted version managed by us should remain a clear alternative for lower-friction adoption.",
+          "The hosted version managed by us is the lower-friction choice for most users.",
       },
     ],
     sections: [
       {
-        title: "What users on this page usually mean",
+        title: "When self-hosting is relevant",
         paragraphs: [
-          "They usually mean they want private 3D model library software and they want the option to run it themselves. That is narrower than a generic self-hosting interest and should be answered accordingly.",
+          "Self-hosting is relevant when private 3D model library software must run on infrastructure you control. If that requirement is absent, the hosted version removes unnecessary operational work.",
         ],
       },
       {
-        title: "What this page should include",
+        title: "What to decide before self-hosting",
         bullets: [
-          "High-level requirements and expectations.",
-          "Ownership and control framing.",
-          "Hosted alternative managed by us.",
-          "No deep infrastructure tutorial content.",
+          "Whether deployment control is a firm requirement.",
+          "Who will own ongoing infrastructure responsibility.",
+          "Whether the hosted alternative already meets the privacy need.",
+          "How the same library workflow will serve the team.",
         ],
       },
       {
@@ -2723,9 +2721,9 @@ export const seoPages = {
           "Not for most users. The hosted version managed by us is usually the simpler option.",
       },
       {
-        question: "Does this page include a full setup tutorial?",
+        question: "Where can I find self-hosting setup details?",
         answer:
-          "No. This page should stay focused on ownership, privacy, and deployment choice at a high level.",
+          "Setup details live in the repository documentation. This guide focuses on ownership, privacy, and deployment choice.",
       },
       {
         question: "Is STL Shelf a marketplace or social platform?",
@@ -2748,26 +2746,3 @@ export const seoPages = {
 } as const satisfies Record<string, SeoPageData>;
 
 export const seoPageList = Object.values(seoPages);
-
-export const seoPageGroups = [
-  {
-    key: "pillar",
-    title: "Pillar pages",
-    pages: seoPageList.filter((page) => page.group === "pillar"),
-  },
-  {
-    key: "guide",
-    title: "Supporting guides",
-    pages: seoPageList.filter((page) => page.group === "guide"),
-  },
-  {
-    key: "comparison",
-    title: "Comparison pages",
-    pages: seoPageList.filter((page) => page.group === "comparison"),
-  },
-  {
-    key: "open-source",
-    title: "Open-source and self-hosted cluster",
-    pages: seoPageList.filter((page) => page.group === "open-source"),
-  },
-] as const;

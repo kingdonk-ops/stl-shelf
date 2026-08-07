@@ -6,14 +6,14 @@ Open-source STL library software for organizing private 3D printing archives, wi
 Open source matters here because it supports ownership, auditability, and deployment choice. It should strengthen the product's credibility without replacing the product story with infrastructure content.
 STL Shelf is open-source software for managing private 3D printing model libraries, and it also has a hosted version managed by us for users who want the workflow without operating the stack.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -24,18 +24,18 @@ STL Shelf is open-source software for managing private 3D printing model librari
 - self-host your archive if desired
 - use a hosted version managed by us
 
-## How open-source positioning should work
+## How open source fits the product
 
-1. **Lead with the product**: Explain the archive-management workflow first so users understand the software category before the deployment model.
+1. **Start with the library workflow**: Confirm that the archive-management workflow fits before choosing a deployment model.
 2. **Use open source as proof of control**: Open source supports ownership, transparency, and self-hosting availability.
-3. **Keep hosted as the easy path**: The hosted version managed by us remains the simplest commercial option for most users.
+3. **Keep hosted as the easy path**: The hosted version managed by us remains the simplest option for most users.
 
 ## Why open source matters for this category
 
 - It reduces vendor-lock-in concerns.
 - It makes self-hosting possible.
 - It supports trust and transparency for ownership-focused buyers.
-- It complements private archive positioning.
+- It complements private archive ownership.
 
 ## What open source does not mean
 
@@ -63,7 +63,7 @@ Because it signals ownership, transparency, and deployment choice without changi
 
 ### Is STL Shelf still private if I use the hosted version?
 
-Yes. The private-library positioning applies to the product model, not only to self-hosted deployments.
+Yes. The product is built around private libraries in both hosted and self-hosted deployments.
 
 ## Related links
 

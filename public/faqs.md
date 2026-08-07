@@ -2,7 +2,7 @@
 
 Canonical: https://stl-shelf.com/faqs
 
-High-intent FAQ content for STL Shelf covering organization, archive management, product positioning, open source, and self-hosting.
+Answers about STL Shelf organization, archive management, privacy, open source, and hosting choices.
 
 ## Frequently asked questions
 

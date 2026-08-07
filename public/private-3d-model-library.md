@@ -6,14 +6,14 @@ STL Shelf is private 3D model library software for makers who want searchable ta
 Many 3D model tools are built around discovery, selling, publishing, or community interaction. Those workflows are valuable for public distribution, but they do not solve the quieter problem of maintaining a private archive you can trust for years.
 STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. STL Shelf is positioned for ownership-first workflows: your files, your versions, your tags, your archive.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -33,7 +33,7 @@ STL Shelf is a software designed to organize, catalog, version, and manage priva
 ## What private means in this category
 
 Private does not just mean hidden from public view. It means the product is structurally designed around your archive instead of around community feeds, external marketplaces, or cross-service imports.
-That positioning matters because it changes how information is modeled. Instead of optimizing for storefront visibility or public engagement, the system optimizes for retrieval, classification, and repeatable use.
+That focus changes how information is organized. Instead of optimizing for storefront visibility or public engagement, the system optimizes for retrieval, classification, and repeatable use.
 
 ## Who needs a private 3D model library
 
@@ -45,7 +45,7 @@ That positioning matters because it changes how information is modeled. Instead 
 ## Why STL Shelf fits
 
 STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview. It is not a marketplace, not a social platform, and not an import/sync hub.
-That makes the product easier to understand both for human visitors and for machine indexing: it is software for organizing and managing a private 3D printing model library.
+It is purpose-built software for organizing and managing a private 3D printing model library.
 
 ## FAQ
 

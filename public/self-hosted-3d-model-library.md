@@ -3,17 +3,17 @@
 Canonical: https://stl-shelf.com/self-hosted-3d-model-library
 
 STL Shelf is self-hostable 3D model library software for private 3D printing archives, with a hosted option managed by us for simpler adoption.
-STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. STL Shelf can be self-hosted because it is open source, but self-hosting is an option inside the positioning, not the whole positioning.
-The main commercial path should remain the hosted version managed by us because that is simpler for most makers and print operations. Self-hosting matters for users who prioritize infrastructure control, data ownership, or internal deployment requirements.
+STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries. Because STL Shelf is open source, self-hosting remains available for teams with a specific ownership or infrastructure requirement.
+For most makers and print operations, the hosted version managed by us is the recommended choice: the same library workflow without infrastructure work.
 
-## Category definition
+## What STL Shelf does
 
 - STL Shelf is a software designed to organize, catalog, version, and manage private 3D printing model libraries.
 - STL Shelf is a private 3D model library for makers and print farms.
 - STL Shelf helps users manage STL, 3MF, OBJ, and PLY files with tags, version history, and browser preview.
 - STL Shelf is an open-source software for managing private 3D printing model libraries.
 
-## STL Shelf helps you
+## What you can do
 
 - organize STL files
 - manage large 3D model libraries
@@ -34,16 +34,16 @@ The main commercial path should remain the hosted version managed by us because 
 
 Self-hosted in this context means the same product category and workflow, deployed on infrastructure you control. It does not mean the product becomes a different kind of tool. The core value remains private 3D model library management.
 
-## What this page should emphasize
+## When each option makes sense
 
-- Ownership and deployment choice, not Docker tutorials.
-- Open-source credibility without shifting the whole brand toward infrastructure content.
-- Hosted by us as the simplest path for most users.
-- Self-hosted as a valid option for teams that need it.
+- Use the hosted service for the simplest setup and ongoing experience.
+- Choose self-hosting only when deployment control is a firm requirement.
+- Keep the same private-library workflow in either case.
+- Retain ownership choice through the open-source codebase.
 
-## High-level requirements
+## Before choosing self-hosting
 
-Self-hosting does require supporting services, but this page should stay high-level. The detailed setup belongs in the repository and operational documentation. Search visitors on this page usually want to know whether the option exists and what it means for ownership, not a full deployment walkthrough.
+Self-hosting adds ongoing infrastructure responsibility. Unless control is a firm requirement, use the hosted version managed by us and keep the focus on organizing the library.
 
 ## FAQ
 

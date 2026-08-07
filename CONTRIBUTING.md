@@ -55,7 +55,7 @@ chore: update dependencies
 
 1. Run the full check:
    ```bash
-   bun check-types && bun check && bun test && bun build
+   bun check-types && bun check && bun run test && bun run build
    ```
 2. Make sure all tests pass
 3. Update documentation if needed
