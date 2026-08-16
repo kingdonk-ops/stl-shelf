@@ -28,6 +28,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      # VITE_* vars are inlined into the client bundle at build time, so the
+      # Turnstile site key must be passed as a build arg (a runtime env var is
+      # too late — the captcha widget would render with no site key and block
+      # sign-up/sign-in). Reuses TURNSTILE_SITE_KEY so one Coolify variable
+      # drives both the client widget and server-side verification; falls back
+      # to Cloudflare's "always passes" test key.
+      args:
+        VITE_TURNSTILE_SITE_KEY: ${TURNSTILE_SITE_KEY:-1x00000000000000000000AA}
     environment:
       # --- Public URL (Coolify generates the domain + proxies port 3000) ---
       - SERVICE_FQDN_APP_3000

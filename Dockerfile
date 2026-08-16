@@ -23,6 +23,15 @@ WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 
+# Client-side (VITE_*) env vars are inlined into the bundle by Vite at build
+# time, so they must be present here — setting them only at container runtime
+# is too late. The Turnstile site key is public; default to Cloudflare's
+# "always passes" test key (pairs with the test secret key defaulted in the
+# compose file) so captcha — and therefore sign-up/sign-in — works out of the
+# box. Override via build args (Coolify passes it from TURNSTILE_SITE_KEY).
+ARG VITE_TURNSTILE_SITE_KEY=1x00000000000000000000AA
+ENV VITE_TURNSTILE_SITE_KEY=$VITE_TURNSTILE_SITE_KEY
+
 # Copy the rest of the source and build.
 COPY . .
 RUN bun run build
