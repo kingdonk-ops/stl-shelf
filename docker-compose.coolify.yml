@@ -1,0 +1,135 @@
+# =============================================================================
+# STL Shelf — Coolify deployment (Docker Compose build pack)
+#
+# A self-contained stack: the app, PostgreSQL, and MinIO (S3-compatible
+# object storage). Point Coolify at this file (Build Pack: "Docker Compose",
+# Compose file: docker-compose.coolify.yml) and it will build the app image
+# from the Dockerfile and run everything together.
+#
+# Coolify "magic" variables are resolved automatically:
+#   SERVICE_FQDN_*      -> a generated domain, with the reverse proxy wired up
+#   SERVICE_URL_*       -> https://<that domain>
+#   SERVICE_USER_*      -> a generated username (stored, stable across deploys)
+#   SERVICE_PASSWORD_*  -> a generated password
+#   SERVICE_BASE64_64_* -> a generated 64-char secret (used for BETTER_AUTH_SECRET)
+#
+# Two public domains are created: one for the app, one for the MinIO S3 API
+# (the browser downloads/uploads via presigned URLs, so MinIO must be
+# publicly reachable). Assign both under the app's "Domains" in Coolify, or
+# let Coolify auto-generate them.
+#
+# Third-party keys (Turnstile / Resend / OpenPanel) fall back to placeholders
+# so the app boots out of the box; set real values in Coolify's Environment
+# Variables to enable captcha, transactional email, and analytics.
+# =============================================================================
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      # --- Public URL (Coolify generates the domain + proxies port 3000) ---
+      - SERVICE_FQDN_APP_3000
+      - AUTH_URL=$SERVICE_URL_APP
+      - WEB_URL=$SERVICE_URL_APP
+      - AUTH_TRUSTED_ORIGINS=$SERVICE_URL_APP
+
+      # --- Database (points at the postgres service below) ---
+      - DATABASE_URL=postgres://$SERVICE_USER_POSTGRES:$SERVICE_PASSWORD_POSTGRES@postgres:5432/stlshelf
+
+      # --- Auth secret (generated once, stable across redeploys) ---
+      - BETTER_AUTH_SECRET=$SERVICE_BASE64_64_BETTERAUTH
+
+      # --- Object storage (MinIO). STORAGE_ENDPOINT is host-only; the app
+      #     adds https:// because STORAGE_USE_SSL=true. Presigned URLs are
+      #     generated against this public MinIO domain. ---
+      - STORAGE_ENDPOINT=$SERVICE_FQDN_MINIO
+      - STORAGE_USE_SSL=true
+      - STORAGE_ACCESS_KEY=$SERVICE_USER_MINIO
+      - STORAGE_SECRET_KEY=$SERVICE_PASSWORD_MINIO
+      - STORAGE_BUCKET_NAME=stl-shelf-models
+      - STORAGE_REGION=auto
+
+      # --- Runtime ---
+      - NODE_ENV=production
+      - PORT=3000
+
+      # --- Third-party integrations (placeholders let the app boot;
+      #     override in Coolify to enable) ---
+      #     Turnstile default = Cloudflare's "always passes" test secret.
+      - TURNSTILE_SECRET_KEY=${TURNSTILE_SECRET_KEY:-1x0000000000000000000000000000000AA}
+      - TURNSTILE_SITE_KEY=${TURNSTILE_SITE_KEY:-1x00000000000000000000AA}
+      - RESEND_API_KEY=${RESEND_API_KEY:-re_placeholder}
+      - EMAIL_FROM=${EMAIL_FROM:-STL Shelf <noreply@example.com>}
+      - OPENPANEL_CLIENT_ID=${OPENPANEL_CLIENT_ID:-op_placeholder}
+      - OPENPANEL_CLIENT_SECRET=${OPENPANEL_CLIENT_SECRET:-op_secret_placeholder}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          'bun -e "fetch(''http://localhost:3000/'').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"',
+        ]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=$SERVICE_USER_POSTGRES
+      - POSTGRES_PASSWORD=$SERVICE_PASSWORD_POSTGRES
+      - POSTGRES_DB=stlshelf
+    volumes:
+      - stl-shelf-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  minio:
+    image: minio/minio:latest
+    environment:
+      # Publicly expose the S3 API (port 9000) so the browser can use
+      # presigned URLs. Coolify generates the domain.
+      - SERVICE_FQDN_MINIO_9000
+      - MINIO_ROOT_USER=$SERVICE_USER_MINIO
+      - MINIO_ROOT_PASSWORD=$SERVICE_PASSWORD_MINIO
+    command: server /data --console-address ":9001" --address ":9000"
+    volumes:
+      - stl-shelf-minio:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 30s
+      timeout: 20s
+      retries: 5
+    restart: unless-stopped
+
+  # One-shot: create the bucket and lock it down (no anonymous reads), so it
+  # matches production — reads go through presigned URLs / /api/download/*.
+  minio-setup:
+    image: minio/mc
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set local http://minio:9000 $SERVICE_USER_MINIO $SERVICE_PASSWORD_MINIO;
+      mc mb --ignore-existing local/stl-shelf-models;
+      mc anonymous set none local/stl-shelf-models;
+      echo 'MinIO bucket ready';
+      "
+    restart: "no"
+
+volumes:
+  stl-shelf-postgres:
+  stl-shelf-minio:

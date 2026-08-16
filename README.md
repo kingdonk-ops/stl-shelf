@@ -49,6 +49,7 @@ STL Shelf can be self-hosted on your own infrastructure.
 For self-hosting prerequisites, required services, and deployment notes, see:
 
 - [Self-Hosted Guide](https://stl-shelf.com/self-hosted-3d-model-library)
+- [Deploy on Coolify](./docs/deploy/coolify.md) — one-click stack (app + PostgreSQL + MinIO) via the bundled `Dockerfile` and `docker-compose.coolify.yml`
 - [.env.example](./.env.example)
 
 ## Quick Start (Development)
